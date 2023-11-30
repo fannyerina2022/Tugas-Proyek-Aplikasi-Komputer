@@ -1,0 +1,768 @@
+﻿>
+% ------
+%% Nama : Fanny Erina Dewi
+%% NIM  : 22305141005
+%% Kelas: Matematika B 2022
+%% ------
+% 
+% SUB BAB 2: Menggambar objek-objek geometri.
+% 
+% * MENGGAMBAR OBJEK OBJEK GEOMETRI
+% 
+% Objek-objek geometri meliputi titik, garis, bidang, bentuk bentuk
+% geometri pada bidang, beserta sifat sifatnya. Tiga unsur geometri
+% yaitu titik, garis, dan bidang. Ketiga unsur tersebut juga disebut
+% sebagai tiga unsur yang tak didefinisikan.
+% 
+>load geometry
+Numerical and symbolic geometry.
+>
+% ** Titik
+%% Objek atau unsur pangkal dalam Geometri yaitu titik. Suatu titik
+% dipikirkan sebagai suatu tempat/ posisi dalam ruang. Titik tidak
+% memiliki panjang maupun ketebalan. Bekas tusukan jaru dan sentuhan
+% pertama ujung pensil di atas kertas dapat dikatakan sebuah noktah
+% dengan diberi nama suatu huruf alphabet kapital. Noktah sendiri adalah
+% bintik atau titik kecil.
+% 
+% 
+% Latihan 1
+%% -----
+%% Gambarlah titik A di koordinat (1,5)!
+>setPlotRange(7); // mendefinisikan bidang kordinat baru
+% Langkah pertama yaitu membuat bidang koordinat dengan jarak 7. Pada
+% setPlotRange menampilkan bidang dengan jarak yang sama dengan masing
+% masing sumbu.
+>A=[1,5];
+% Langkah kedua yaitu memanggil titik A untuk menggambar titik A di
+% bidang koordinat.
+>plotPoint(A,"A"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-001.png
+% Langkah ketiga yaitu menggambar titik dengan fungsi plotPoint. Fungsi
+% ini untuk menggambar titik A dengan memberi nama "A". Titik A disini
+% merupakan titik koordinat (1,5). 1 sebagai sumbu x dan 5 sebagai sumbu
+% y.
+% 
+>setPlotRange(-7,3,-7,3);
+>A=[1,5]; plotPoint(A,"A"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-002.png
+>
+% 
+% Latihan 2
+%% --------
+%% Gambarlah titik B di koordinat (-3,-5)!
+>setPlotRange(-7,3,-7,3);
+% Langkah pertama yaitu membuat bidang koordinat dengan x1=-7, x2=3,
+% y1=-7, y2=3. bidang koordinat ini menentukan x dan y dengan x1
+% menunjukkan batas terkecil dan x2 menunjukkan batas terbesar sumbu x
+% sedangkan y1 menunjukkan batas terkecil dan y2 menunjukkan batas
+% terbesar sumbu y. 
+>B=[-3,-5]; plotPoint(B,"B"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-003.png
+% Langkah kedua yaitu memulis titik B dengan memanggil plotPoint dengan
+% menggambar titik B dengan memberi nama "B". Titik B ini (-3,-5) dengan
+% x =-3 dan y=-5.
+% 
+% Latihan 3
+%% -------
+%% Gambarlah 4 di titik C (2,7), titik D (-3,-5), titik E (-4,6), titik F
+% (2,-4) di bidang koordinat!
+>setPlotRange(7);
+% Langkah pertama adalah menggambar bidang koordinatnya, disini saya
+% mengambil batas 7 di setiap sumbunya
+>C=[2,7]; D=[-3,-5]; E=[-4,6]; F=[2,-4]; // mendefinisikan 3 titik
+% Langkah kedua yaitu menulis ketiga titik, titik yang diambil bisa di
+% jadikan satu perintah dengan menulis titik C dilanjut titik dua dan
+% spasi kemudian tulis titik berikutnya
+> plotPoint(C,"C"); plotPoint(D,"D"); plotPoint(E,"E"); plotPoint(F,"F"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-004.png
+% Langkah terakhir yaitu memanggil fungsi plotPoint. Menggambar titik
+% ini bisa dijadikan satu perintah juga.
+% 
+% Latihan 4
+%% ------
+%% Tentukan jarak antara titik P dan titik Q!
+%% Titik P = (0,-5)
+%% Titik Q = (-5,0)
+> setPlotRange(-6,1,-6,1);
+% Langkah pertama adalah menggambar bidang koordinatnya terlebih dahulu
+> P=[0,-5]; Q=[-5,0]; // mendefinisikan titik
+% Langkah kedua yaitu mendefinisikan titik dengan menulis titiknya.
+> plotPoint(P,"P"); plotPoint(Q,"Q"): //menggambarkan titik
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-005.png
+% Langkah ketiga adalah menggambar titik, seperti pada latihan di atas
+% cara menggambar titik adalah dengan plotPoint
+>distance(P,Q) // menentukan jarak P dan Q
+7.07106781187
+% Langkah terakhir adalah dengan fungsi distance. Fungsi distance
+% digunakan untuk menentukan jarak antara titik 1 dengan titik lainnya
+% 
+% Cara manual untuk menentukan jarak P dan Q adalah dengan rumus
+% phytagoras
+% 
+% latex: A = -5, B =-5, C= ?
+%% latex: \sqrt{50}
+%% latex: 5\sqrt{2} atau sekitar 7,07107
+% 
+% Latihan 5
+%% -----
+%% Tentukan titik tengah RS!
+%% Titik R = (5,1)
+%% Titik S = (3,6)
+>R=[5,1]; S=[3,6]; //mendefinisikan titik R dan S
+>middlePerpendicular(R,S)
+[2,  -5,  -9.5]
+% Latihan 6
+%% -----
+%% Tentukan kuadrat jarak titik R dan titik T!
+>R=[5,1]; S=[3,6];
+>distanceSquared(R,S)
+29
+>
+% Latihan 7
+%% -----
+%% Tentukan kuadrat jarak titik R dan titik S!
+>R=[5,1]; S=[3,6]; 
+>quadrance(R,S)
+29
+% ** Contoh 1
+>setPlotRange(0,9,0,9);
+>S=[3,4]; plotPoint(A,"A");
+>V=[0.5,5]; plotPoint(B,"B");
+>T=[1,1]; plotPoint(C,"C"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-006.png
+>color(3); plotSegment(A,B,"AB"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-007.png
+>color(8); plotSegment(B,C,"BC"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-008.png
+% ** Menggambar Ruas Garis
+% 
+% Ruas Garis adalah sebagian dari garis yang dibatasi oleh dua titik
+% ujung yang berbeda, dan memuat semua titik pada garis di antara
+% ujung-ujungnya. Ruas garia memiliki titik awal dan titik akhir.
+% 
+% Dalam latihan 8 kita menggambar ruas garis
+% 
+% Apabila kita ingin menambahkan warna pada ruas garis dengan rumu pada
+% fungsi yaitu
+>color(2); plotSegment(A,C,"AC"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-009.png
+>
+>
+>
+% Latihan 1
+%% ------
+%% Gambarlah ruas garis dengan titik A (0,5) dan titik B (1,5)!
+>setPlotRange(5);
+% Membuat koordinat dengan setPlotRange (5)
+>A=[0,5]; plotPoint(A,"A"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-010.png
+% Menentukan titik A dan menggambar titik A
+>B=[1,5]; plotPoint(B,"B"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-011.png
+% Menentukan titik B dan menggambar titik B menggunakan fungsi plotPoint
+>plotSegment(A,B,"AB",3):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-012.png
+% Menggambar ruas garis dengan batas titik A (0,5) dan titik B (1,5)!
+% 
+% Latihan 2
+%% -----
+%% Gambarlah ruas garis dengan titik C (6,8) dan titik D (8,6)!
+>setPlotRange(10);
+% Membuat garis kartesius/ bidang koordinat
+> C=[6,8]; D=[8,6]; plotPoint(C,"C"); plotPoint(D,"D"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-013.png
+% Menentukan titik dan menggambar titik C dan D
+>plotSegment(C,D,"CD",20):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-014.png
+% Menggambar ruas garis CD dengan titik C(6,8) dan titik D(8,6) dengan
+% jarak label dari ruas garis adalah 20
+% 
+% Latihan 3
+%% -------
+%% Tentukan titik tengah di ruas AB, jika diketahui titik A(0,2), titik
+% B(6,2)!
+>setPlotRange(10);
+% Langkah pertama adalah dengan membuat bidang koordinatnya
+>A=[0,2]; plotPoint(A,"A"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-015.png
+% Langkah kedua dan ketiga adalah mendefisikan dan menggambar titiknya
+>B=[6,2]; plotPoint(B,"B"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-016.png
+>plotSegment(A,B,"c"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-017.png
+% Kemudian menggambar ruas garis yang melalui 2 titik yaitu A dan B 
+>h= middlePerpendicular(A,B):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-018.png
+% Selanjutnya buat garis h yang tegak lurus ruas garis AB dan memotong
+% tepat di tengah ruas garis AB
+>plotLine(h):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-019.png
+% Gambar garis h
+>D=lineIntersection(h,lineThrough(A,B)):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-020.png
+% Menentukan titik potong garis AB 
+>plotPoint(D,value=1):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-021.png
+% Menggambar titik potongnya
+% 
+% ** Menggambar Garis
+% 
+% Sebuah garis dipikirkan sebagai suatu himpunan titik berderet yang
+% panjang tak terbatas , tetapi tidak memiliki lebar. Sebuah garis
+% direpresentasikan dengan sebuah gambar sinar dengan mata di kedua
+% ujungnya yang menunjukkan bahwa garis tersebut tak berakhir.
+% 
+% Sebuah garis itu lurus sempurna, tidak memiliki ketebalan. Garis bisa
+% dimodelkan sebagai garis lurus yang tidak ada awalan dan akhirannya.
+% 
+% Latihan 1
+%% -------
+%% Gambarlah garis dengan persamaan 5x+2y=7!
+%% Persamaan 5x+2y=7 bisa dituliskan sebagai [5,2,7]
+>setPlotRange(0,10,0,10);
+% Lankah pertama adalah menentukan batas koordinat yaitu x1=0
+% ,x2=10,y1=0 dan y2=10
+>plotLine([5,2,7],"g",10):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-022.png
+% Menentukan garis dengan fungsi plotline(persamaan garis,"label",jarak
+% label)
+% 
+% Latihan 2
+%% -----
+%% Gambarlah garis yang melalui titik C (2,3) dan titik D(1,4)!
+>setPlotRange(0,7,0,7);
+% Langkah pertama adalah menggambar bidang kartesius terlebih dahulu
+>C=[2,3]; D=[1,4];
+% Menentukan titik C dan titik D
+>g=$lineThrough(C,D)
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-023.png
+% // latex: \left[ -\left(D-C\right)_{2} , \left(D-C\right)_{1} , \left[ -  \left(D-C\right)_{2} , \left(D-C\right)_{1} \right] \cdot C \right] 
+% Latihan 3
+%% ---------
+%% Tentukan vektor arah (gradien) garis g!
+>$getLineDirection(g)
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-024.png
+% // latex: \left[ g_{2} , -g_{1} \right] 
+% Latihan 4
+%% --------
+%% Menentukkan garis yang melalui titik A (3,4) dan tegak lurus terhadap
+% garis (g) 
+>$h=perpendicular(A,g)
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-025.png
+% // latex: h=\left[ g_{2} , -g_{1} , \left[ g_{2} , -g_{1} \right] \cdot A   \right] 
+% Latihan 5
+%% -------
+%% Menentukan garis yang melalui titik dan sejajar terhadap garis g
+>$m=parallel(A,g)
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-026.png
+% // latex: m=\left[ g_{1} , g_{2} , \left[ g_{1} , g_{2} \right] \cdot A   \right] 
+% Latihan 6
+%% ----
+%% Menentukan titik potong dua garis, yaitu garis g dan garis h
+>$lineIntersection(g,h)
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-027.png
+% // latex: \left[ \frac{g_{2}\,h_{3}-h_{2}\,g_{3}}{h_{1}\,g_{2}-g_{1}\,h_{2}}   , \frac{h_{1}\,g_{3}-g_{1}\,h_{3}}{h_{1}\,g_{2}-g_{1}\,h_{2}}   \right] 
+% Latihan 7
+%% ----
+%% Menentukan proyeksi titik A pada garis g
+>$projectToLine(A,g)
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-028.png
+% // latex: \left[ \frac{g_{2}\,\left[ g_{2} , -g_{1} \right] \cdot A-g_{1}\,  \left[ -g_{1} , -g_{2} \right] \cdot A}{g_{2}^2+g_{1}^2} , \frac{-g  _{1}\,\left[ g_{2} , -g_{1} \right] \cdot A-g_{2}\,\left[ -g_{1} , -  g_{2} \right] \cdot A}{g_{2}^2+g_{1}^2} \right] 
+>
+>
+% Latihan 8
+%% ---- 
+%% Menentukkan garis dengan titik F(7,2), dan A(3,4) dan jarak label 10!
+>setPlotRange(0,10,0,10)
+[0,  10,  0,  10]
+% Menentukan bidang kartesius dengan batas terkecil x maupun y yaitu 0
+% dan batas terbesar x maupun y yaitu 10
+>F=[7,2]; A:=[3,4];
+% Menentukkan titik F dan titik A
+>m=middlePerpendicular(F,A);
+% Membuat garis FA denngan fungsi middlePerpendicular
+>plotLine(m,"m",10):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-029.png
+% Menggambar garis dan jarak label menggunakan fungsi plotLine
+% 
+% Latihan 8
+%% ---
+%% Gambar garis sumbu ruas AB dengan titik A(2,2) dan B(-1,-2)!
+>A=[2,2]; B=[-1,-2]; // menentukan titik titiknya
+>c1=circleWithCenter(A,distance(A,B)); //membuat lingkaran dengnan pusat A dan jari jari r
+>c2=circleWithCenter(B,distance(A,B));
+>{P1,P2,f}=circleCircleIntersections(c1,c2);
+>l=lineThrough(P1,P2);
+>setPlotRange(5); plotCircle(c1); plotCircle(c2):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-030.png
+>plotPoint(A); plotPoint(B); plotSegment(A,B); plotLine(l):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-031.png
+% ** Contoh 1
+%% Apabila ingin menggambar garis kita dapat menggunakan rumus sebagai
+% berikut:
+% 
+>n=angleBisector(A,B,C); color(7); plotLine(n):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-032.png
+>
+>
+% ** Menggambar Bidang/ segibanyak
+%% Bidang adalah permukaan rata dan tentu batasnya. Bidang didefinisikan
+% sebagai permukaan datar yang didefinisikan oleh serangkaian garis yang
+% tidak berpotongan
+% 
+% Dengan contoh 1 kita dapat menggambar segibanyak
+% 
+% ** Segilima
+% 
+% Langkah pertama adalah menggambar ketiga titik
+>setPlotRange(-5,5,-5,5); O=[0,0]; plotPoint(O,"O"); A=[0,4]; plotPoint(A,"A"); B=turn(A,-72°); plotPoint(B,"B"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-033.png
+% ** Segienam
+>setPlotRange(-8,8,-8,8); O=[0,0]; plotPoint(O,"O"); A=[-2.3,4]; plotPoint(A,"A"); B=turn(A,-60°); plotPoint(B,"B"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-034.png
+% ** Segitujuh
+>setPlotRange(-5,8,-5,5); O=[0,0]; plotPoint(O,"O"); A=[0,4]; plotPoint(A,"A"); B=turn(A,-360°/7); plotPoint(B,"B"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-035.png
+>
+>
+>
+>setPlotRange(-5,5,-5,5);
+>Q=[-2,4]; plotPoint(Q,"Q");
+>R=[1,4]; plotPoint(R, "R");
+>S=[2,2]; plotPoint(S, "S");
+>T=[-3,2]; plotPoint(T, "T");
+>M=[-2,0]; plotPoint(M, "M");
+>N=[1,0]; plotPoint(N, "N"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-036.png
+>color(2); plotSegment(Q,R," "); plotSegment(S,R," ");  plotSegment(S,T," "); plotSegment(Q,T," "):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-037.png
+>
+% Langkah kedua adalah menggambar garis AC, BC, AC
+>plotSegment(Q,R," ");
+>plotSegment(R,S," ");
+>plotSegment(S,T," ");
+>plotSegment(T,Q," "):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-038.png
+% * Trapesium Sama Kaki
+% 
+>setPlotRange(-5,5,-5,5)
+[-5,  5,  -5,  5]
+>Q=[-2,4]; plotPoint(Q,"Q")
+>R=[1,4]; plotPoint(R, "R")
+>S=[2,2]; plotPoint(S, "S");
+>T=[-3,2]; plotPoint(T, "T"); 
+>M=[-2,0]; plotPoint(M, "M");
+>N=[1,0]; plotPoint(N, "N"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-039.png
+>color(2); plotSegment(Q,R," "); plotSegment(S,R," "); plotSegment(S,T," "); plotSegment(Q,T," "):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-040.png
+>color(5); plotSegment(Q,R," "); plotSegment(R,S," ");  plotSegment(S,N," "); plotSegment(N,M," "); plotSegment(M,T," "); plotSegment(T,Q," "):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-041.png
+% .....
+>setPlotRange(-5,17,-5,17); //mendefinisikan bidang koordinat
+>A=[-3,5]; B=[-3,15]; C=[5,5]; D=[5,15]; //mendefinisikan dan menggambar 4 titik
+>plotPoint(A,"A"); plotPoint(B,"B"); plotPoint(C,"C"); plotPoint(D,"D");
+% Menggambar 4 titik
+>plotSegment(A,B,"a"); plotSegment(B,D,"b"); plotSegment(C,D,"c"); plotSegment(A,C,"d"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-042.png
+% Membuat ulang garis A,B dan C
+% 
+% Latihan 2
+%% --------
+%% Menggambarkan segitiga siku siku dengan titik D(2,4), E(2,8), F(6,4)!
+>setPlotRange(-5,10,-5,10);
+% Menentukan gambar bidang kartesius
+>D=[2,4]; E=[2,8]; F=[6,4];
+% Menentukan 3 titik D,E dan F
+>plotPoint(D,"D"); plotPoint(E,"E"); plotPoint(F,"F"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-043.png
+% Menggambar 3 titik
+>plotSegment(D,E,"DE",10); plotSegment(E,F,"EF",10); plotSegment(F,A,"FA",10):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-044.png
+% membuat 3 garis yaitu DE,EF,FA dengan jarak label 10
+>
+% Latihan 3
+%% -----
+%% Gambar dan tebaklah suatu bidang dengan titik A(-2,-5),B(2,-5),C(2,-1)
+% dan D(-2,-1)
+>setPlotRange(-5,10,-5,10); // membuat bidang kartesius
+>A=[-2,-5]; B=[2,-5]; C=[2,-1]; D=[-2,-1]; // menentukan titik
+>plotPoint(A,"A"); plotPoint(B,"B"); plotPoint(C,"C"); plotPoint(D,"D"): // menggambar titik
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-045.png
+>plotSegment(A,B,"a",10); plotSegment(B,C,"b",10); plotSegment(C,D,"c"); plotSegment(D,A,"d"): // menggambar garis
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-046.png
+% Latihan 4
+%% ----
+%% Gambarlah objek geometri segitiga dengan 3 titik yaitu A (1,0), B(0,1)
+% dan C (2,2)!
+% 
+>setPlotRange(-0.5,2.5,-0.5,2.5); // mendefinisikan bidang koordinat baru
+>A=[1,0]; plotPoint(A,"A"); // definisi dan gambar tiga titik
+>B=[0,1]; plotPoint(B,"B");
+>C=[2,2]; plotPoint(C,"C");
+>plotSegment(A,B,"c"); // c=AB
+>plotSegment(B,C,"a"); // a=BC
+>plotSegment(A,C,"b"); // b=AC
+>lineThrough(B,C) // garis yang melalui B dan C
+[-1,  2,  2]
+>h=perpendicular(A,lineThrough(B,C)); // garis h tegak lurus BC melalui A
+>D=lineIntersection(h,lineThrough(B,C)); // D adalah titik potong h dan BC
+>plotPoint(D,value=1); // koordinat D ditampilkan
+>aspect(1); plotSegment(A,D): // tampilkan semua gambar hasil plot...()
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-047.png
+>l=angleBisector(A,C,B): // garis bagi <ACB
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-048.png
+>g=angleBisector(C,A,B): // garis bagi <CAB
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-049.png
+>P=lineIntersection(l,g) // titik potong kedua garis bagi sudut
+[0.86038,  0.86038]
+% ** Segitiga Siku-siku
+% 
+% Langkah pertama dalam menggambarkan objek objek geometri yaitu membuat
+% perintah untuk geometry dengan "load geometry".
+>load geometry
+Numerical and symbolic geometry.
+% Langkah kedua kita akan menentukan rentang sumbu terlebih dahulu
+>setPlotRange(-5,8,-5,8):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-050.png
+% Langkah ketiga adalah menentukan ketiga titik bidang koordinat
+>A=[6,0]; plotPoint(A,"A"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-051.png
+>B=[2,0]; plotPoint(B,"B"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-052.png
+>C=[2,6]; plotPoint(C,"C"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-053.png
+% Langkah keempat menggambar ruas garis di ketiga titik
+>plotSegment(A,B,"c"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-054.png
+>plotSegment(B,C,"a"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-055.png
+>plotSegment(A,C,"b"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-056.png
+% Langkah kelima menghitung luas segitiga siku siku
+>areaTriangle(A,B,C)
+12
+% membuktikan menggunakan perintah manual:
+>norm(A-B) // menghitung panjaang alas dari panjang garis AB 
+4
+>norm(B-C) // menghitung panjang tinggi dari panjang garis BC
+6
+>norm(A-B)*norm(B-C)/2
+12
+% Hasilnya sesuai dengan perintah menggunakan fungi geometri yang
+% bernilai 12 satuan
+>
+% ** Menggambar Lingkaran
+%% Lingkaran adalah tempat kedudukan/himpunan titik-titik yang berjarak
+% sama terhadap suatu titik tertentu. Jarak yang sama disebut panjang
+% jari-jari linngkaran dan titik tertentu disebut pusat lingkaran.
+% 
+% Contoh 1:
+%% Melanjutkan dari luas segitiga siku siku Gambar suatu lingkaran yang
+% mengelilingi segitiga siku siku ABC.
+>m=circleThrough(A,B,C);
+>R=getCircleRadius(m):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-057.png
+>O=getCircleCenter(m):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-058.png
+>plotPoint(O,"O"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-059.png
+> plotCircle(1,"Lingkaran Luar m"):
+Index 3 out of bounds!
+Try "trace errors" to inspect local variables after errors.
+plotCircle:
+    t=linspace(0,2pi,100*floor(max(1,c[3])));
+% Langkah kedua yaitu menentukan jari jari lingkaran
+>R
+3.60555127546
+% Langkah ketiga yaitumenghitung luas lingkaran luar m
+>pi*(3.605551275462)^2
+40.8407044966
+>
+% latex: L_{m}= \pi \times r^2
+%% latex: L_{m}= \pi \times 3.60555127546^2
+%% latex: L_{m}= 40.8407044966
+%% Jadi luas lingkaran luar m adalah  40.8407044966 satuan
+% 
+% Latihan 1
+%% -----
+>setPlotRange(20);
+>P=[5,5]; r=[14];
+>plotCircle(circleWithCenter(P,r),"Lingkaran"); // gambar lingkaran
+% Cari titik pusat lingkaran dan jari jari lingkaran
+>setPlotRange(20);
+>P=[1,3]; plotPoint(P,"P");
+>L=[-1,-3]; plotPoint(L,"L"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-060.png
+>c1=circleWithCenter(P,distance(P,L)); plotCircle(c1);
+>plotSegment(P,L," "):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-061.png
+% Latihan 2
+%% ------
+%% Buatlah lingkaran yang melalui tiga titik yaitu titik A (0,2), B(4,2)
+% dan C(2,4)!
+>setPlotRange(-1,6,-1,6); // menentukan rentang x dan y pada bidang koordinat
+>A=[0,2]; plotPoint(A,"A"); 
+>B=[4,2]; plotPoint(B,"B");
+>C=[2,4]; plotPoint(C,"C");
+>c=circleThrough(A,B,C); // luar lingkaran ABC
+>o=getCircleCenter(c); // menentukan titik pusat lingkaran
+>plotCircle(c, "luar lingkaran ABC"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-062.png
+>
+% Latihan 3
+%% ------
+%% Gambarlah lingkaran yang melalui titik A (0,2), B (-2,-1), C (0,3) dan
+% tentukan titik pusatnya!
+>setPlotRange(-10,8,-10,8):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-063.png
+% Langkah pertama yaitu menentukan batas tiap sumbu bidang koordinatnya
+>A = [0,2]; B = [-2,-1]; C = [0,3];
+% Langkah kedua menentukan titiknya
+>plotPoint(A,"A"); plotPoint(B,"B"); plotPoint(C,"C")
+% Langkah ketiga yaitu menggambar ketiga titiknya
+>c = circleThrough(A,B,C);
+% Langkah keempat merupakan fungsi lingkaran pada titik A,B dan C
+>P = getCircleCenter(c);
+% Langkah kelima adalah menentukan titik pusat lingkarannya, caranya
+% dengan fungsi getCircleCenter(A,B,C)
+>plotPoint(P,"P"); 
+% Langkah keenam yaitu menggambar titik pusatnya
+>plotCircle(c,"Lingkaran c"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-064.png
+% Langkah terakhir yaitu memanggil lingkaran dan memberi label
+% "lingkaran c"
+% 
+% Latihan 4
+%% ---------
+>setPlotRange(-5,5,-5,5); 
+% Membuat bidang kartesiusnya
+>A=[0,2]; plotPoint(A,"A"): //mendefinisikan titik dan gambarnya
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-065.png
+>B=[4,2]; plotPoint(B,"B"): 
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-066.png
+>C=[2,4]; plotPoint(C,"C"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-067.png
+>c=circleThrough(A,B,C): //lingkaran melalui 3 titik
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-068.png
+>o=getCircleCenter(c): // menentukan pusat lingkaran c
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-069.png
+>plotCircle(c): //Menggambar lingkaran c dengan label nama "c"
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-070.png
+>o
+[2,  2]
+% Latihan 5
+%% -----
+%% Gambarlah lingkaran jika diketahui 3 titik yang membentuk segitiga
+>setPlotRange(5)
+[-5,  5,  -5,  5]
+>A::=[-1,-1]; B::=[2,0]; C::=[1,2];
+>plotPoint(A,"A"); plotPoint(B,"B"); plotPoint(C,"C");
+>plotSegment(A,B,""); plotSegment(B,C,""); plotSegment(C,A,""):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-071.png
+>LL &= circleThrough(A,B,C); $getCircleEquation(LL,x,y)
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-072.png
+% // latex: \left(y-\frac{5}{14}\right)^2+\left(x-\frac{3}{14}\right)^2=\frac{  325}{98}
+>O &= getCircleCenter(LL); $O
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-073.png
+% // latex: \left[ \frac{3}{14} , \frac{5}{14} \right] 
+>plotCircle(LL()); plotPoint(O(),"O"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-074.png
+% Latihan 6
+%% -----
+%% Menggambar lingkaran menggunakan plot 2D dengan menggunakan rumus umum
+% lingkaran
+%% latex: x^2+y^2=r^2
+>aspect(1);
+>plot2d("x^2+y^2-4",r=3,level=1):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-075.png
+>aspect(2);
+>plot2d("((x^2)/4)+((y^2)/4)-1",r=10,level=4,contourcolor=red):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-076.png
+% ** Menggambar Parabola
+%% Parabola adalah garis lengkung datar yang berbentuk jika suatu bidang
+% memotong kerucut sejajar dengan garis titik sudut puncak dengan salah
+% satu titik pada keliling alas. Contohnya seperti antena tv berbentuk
+% bundar seperti piring cekung yang dapat menangkap siaran jarak jauh.
+% 
+% Contoh Parabola
+%% latex: x^2-2x-2y+5
+%% Gambar Parabolanya
+>aspect(1);
+>plot2d("x^2-2x-2y+5"): //parabola
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-077.png
+% Latihan 1
+%% -------
+%% Misalkan persamaan parabolanya
+%% latex: y=ax^2+bx+c
+%% Gambarlah bentuk parabolanya!
+>
+>function f(x) &=a*x^2+b*x+c;
+>setPlotRange(-5,6,-11,2);
+>A=[-2,0]; plotPoint(A,"A");
+>B=[5,0]; plotPoint(B,"B");
+>C=[2,0]; plotPoint(C,"C");
+>&powerdisp:true;
+>&f(-2)=0
+
+                          4 a - 2 b + c = 0
+
+>aspect(1)
+>plot2d("4*x^2-2*x+1"): //parabola
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-078.png
+% Latihan 2
+%% ----
+>setPlotRange(3)
+[-3,  3,  -3,  3]
+>p &= getHesseForm(lineThrough(A,B),x,y,C)-distance([x,y],C); $p='0
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-079.png
+% // latex: -\sqrt{\left(1-x\right)^2+\left(2-y\right)^2}+\frac{2-x+3\,y}{  \sqrt{10}}=0
+>plot2d(p,level=0,add=1,contourcolor=2):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-080.png
+>
+% Latihan 3
+%% ------
+%% latex: f(x)=x^2+5x+6
+>function f(x) := x^2+5x+6
+>aspect(2), plot2d("f(x)",-10,5):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-081.png
+>
+% Latihan 4
+%% -----
+>aspect(5);
+>plot2d("4x^2-9y^2"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-082.png
+>
+% * Hiperbola
+>aspect(1);
+>plot3d("4x^2-9y^2-36"): //hiperbola
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-083.png
+>aspect(3);
+>plot3d("4*x^2-2*x+1"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-084.png
+% 
+% ** Latihan
+%% 1. Gambarkan lingkaran luar dan dalam segitiga ABC dengan A(-7,-2),
+% B(7,-4),C(11,8).
+>setPlotRange(15);
+>A=[-7,-2]; plotPoint (A,"A"); // definisi dan menggambar ketiga titik
+>B=[7,-6]; plotPoint (B,"B"); 
+>C=[11,8]; plotPoint (C,"C");
+>plotSegment (A,B,"c"); // c=AB
+>plotSegment (B,C,"a"); // a=BC
+>plotSegment (C,A,"b"); // b=CA
+>m=circleThrough(A,B,C); // lingkaran luar segitiga
+>P=getCircleCenter(m); // titik pusat lingkaran m
+>R=getCircleRadius(m); // jari-jari lingkaran m
+>plotPoint(P,"P"); // gambar titik "P"
+>plotCircle(m,"Lingkaran luar segitiga ABC"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-085.png
+>l=angleBisector(A,C,B); // garis bagi <ACB
+>g=angleBisector(C,A,B); // garis bagi <CAB
+>P=lineIntersection(l,g) // titik potong kedua garis bagi sudut
+[4.07107,  -0.727922]
+>color(5); plotLine(l); plotLine(g); color(1); // gambar kedua garis bagi sudut
+>plotPoint(P,"P"); // gambar titik potongnya
+>r=norm(P-projectToLine(P,lineThrough(A,B))) // jari-jari lingkaran dalam
+4.26458963757
+>plotCircle(circleWithCenter(P,r),"Lingkaran dalam segitiga ABC"): // gambar lingkaran dalam
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-086.png
+>
+% 2. Diberikan ruas garis s melalui dua titik A dan titik B. Dengan
+% koordinat titik A dan titik B berturut-turut (0,1) dan (7,1). Tentukan
+% koordinat titik tengah ruas garis s!
+>setPlotRange(10); //menggambar bidang kartesius
+>A=[0,1]; plotPoint(A,"A"): // membuat dan menggambar titik A dan B
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-087.png
+>B=[7,1]; plotPoint(B,"B"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-088.png
+>plotSegment(A,B,"s"): // menggambar garis dengan label s
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-089.png
+>h= middlePerpendicular(A,B): //titik tengah AB
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-090.png
+>plotLine(h): //garis melalui titik tengah 
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-091.png
+>D=lineIntersection(h,lineThrough(A,B)): // titik potong garis h dan garis yang melalui AB
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-092.png
+>plotPoint(D,value=1):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-093.png
+>
+% 3. Diberikan dua garis yang melewati titik koordinat sebagai berikut:
+%% garis AB: titik A(-4,4) dan titik B(4,0)
+%% garis CD: titik C(0,0) dan titik D(0,2)
+%% tentukan koordinat titik potong kedua garis tersebut!
+>setPlotRange(5); // menggambar bidang kartesius
+>A=[-4,4]; plotPoint(A,"A"): // membuat dan menggambar 3 titik
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-094.png
+>B=[4,0]; plotPoint(B,"B"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-095.png
+>C=[0,0]; plotPoint(C,"C"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-096.png
+>D=[0,2]; plotPoint(D,"D"):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-097.png
+>plotSegment(A,B,"c"): // c=AB menggambar garis c dan b
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-098.png
+>plotSegment(C,D,"b"): // b=CD
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-099.png
+>lineThrough(A,B): // garis yang melalui titik A dan titik B
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-100.png
+>lineThrough(C,D): // garis yang melalui titik C dan titik D
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-101.png
+>E=lineIntersection(lineThrough(A,B),lineThrough(C,D));
+>plotPoint(E,value=1):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-102.png
+% 
+% 4. Gambarlah suatu parabola yang melalui 3 titik yang diketahui
+% 
+% Petunjuk:
+%% - Misalkan persamaan bolanya y=ax^2+bx+c
+%% - Substitusikan koordinat titik titik yang diketahui ke persamaan
+% berikut
+%% - Selesaikan SPL yang terbentuk untuk mendapatkan nilai nilai a,b,c
+>function f(x) &= a*x^2+b*x+c;
+>setPlotRange(-5,6,-11,2);
+>A=[-2,0]; plotPoint(A,"A");
+>B=[5,0]; plotPoint(B,"B");
+>C=[0,-10]; plotPoint(C,"C");
+>&powerdisp:true;
+>&f(-2)=0
+
+                          4 a - 2 b + c = 0
+
+>&f(5)=0
+
+                          25 a + 5 b + c = 0
+
+>&f(0)=-10
+
+                               c = - 10
+
+>&solve([4*a-2*b-10=0,25*a+5*b-10=0],[a,b])
+
+                          [[a = 1, b = - 3]]
+
+>plot2d("x^2-3*x-10",r=15,xmax=6,xmin=-3); plot2d(-2,0,>add,>points); plot2d(5,0,>add,>points); plot2d(1.5,-12):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-103.png
+% 5. Gambarlah suatu ellips jika diketahui kedua titik fokusnya,
+% misalkan P dan Q. Ingat ellips fokus P dan Q adalah tempat kedudukan
+% titik-titik yang jumlah jarak ke P dan ke Q selalu sama (konstan).
+%% elesaikan SPL yang terbentuk untuk mendapatkan nilai nilai a,b,c
+>P= [-1,0];
+>Q= [1,0];
+>distance(P,Q)
+2
+>t=linspace(0,2pi,1000); plot2d(1*distance(P,Q)*cos(t),sin(t),r=3);
+>plot2d(-1,0,>add,>points); plot2d(1,0,>add,>points):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-104.png
+% 6. Gambarlah suatu hiperbola jika diketahui kedua titik fokusnya,
+% misalnya P dan Q. Ingat ellips dengan
+%% fokus P dan Q adalah tempat kedudukan titik-titik yang selisih jarak
+% ke P dan ke Q selalu sama (konstan). 
+>P=[-2,0];
+>Q=[2,0];
+>t=linspace(-5,5,1000); plot2d(cosh(t),sinh(t),r=3); plot2d(-cosh(t),-sinh(t),>add):
+ %image% Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-105.png
+> 
+>
+>

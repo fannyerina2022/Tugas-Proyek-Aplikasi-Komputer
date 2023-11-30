@@ -1,0 +1,1448 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{eumat}
+
+\begin{document}
+\begin{eulernotebook}
+\eulersubheading{}
+\begin{eulercomment}
+Nama : Fanny Erina Dewi\\
+NIM  : 22305141005\\
+Kelas: Matematika B 2022\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+SUB BAB 2: Menggambar objek-objek geometri.
+
+\begin{eulercomment}
+\eulerheading{MENGGAMBAR OBJEK OBJEK GEOMETRI}
+\begin{eulercomment}
+Objek-objek geometri meliputi titik, garis, bidang, bentuk bentuk
+geometri pada bidang, beserta sifat sifatnya. Tiga unsur geometri
+yaitu titik, garis, dan bidang. Ketiga unsur tersebut juga disebut
+sebagai tiga unsur yang tak didefinisikan.
+
+\end{eulercomment}
+\begin{eulerprompt}
+>load geometry
+\end{eulerprompt}
+\begin{euleroutput}
+  Numerical and symbolic geometry.
+\end{euleroutput}
+\eulersubheading{Titik}
+\begin{eulercomment}
+Objek atau unsur pangkal dalam Geometri yaitu titik. Suatu titik
+dipikirkan sebagai suatu tempat/ posisi dalam ruang. Titik tidak
+memiliki panjang maupun ketebalan. Bekas tusukan jaru dan sentuhan
+pertama ujung pensil di atas kertas dapat dikatakan sebuah noktah
+dengan diberi nama suatu huruf alphabet kapital. Noktah sendiri adalah
+bintik atau titik kecil.
+
+
+Latihan 1\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Gambarlah titik A di koordinat (1,5)!
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(7); // mendefinisikan bidang kordinat baru
+\end{eulerprompt}
+\begin{eulercomment}
+Langkah pertama yaitu membuat bidang koordinat dengan jarak 7. Pada
+setPlotRange menampilkan bidang dengan jarak yang sama dengan masing
+masing sumbu.
+\end{eulercomment}
+\begin{eulerprompt}
+>A=[1,5];
+\end{eulerprompt}
+\begin{eulercomment}
+Langkah kedua yaitu memanggil titik A untuk menggambar titik A di
+bidang koordinat.
+\end{eulercomment}
+\begin{eulerprompt}
+>plotPoint(A,"A"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-001.png}
+\begin{eulercomment}
+Langkah ketiga yaitu menggambar titik dengan fungsi plotPoint. Fungsi
+ini untuk menggambar titik A dengan memberi nama "A". Titik A disini
+merupakan titik koordinat (1,5). 1 sebagai sumbu x dan 5 sebagai sumbu
+y.
+
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(-7,3,-7,3);
+>A=[1,5]; plotPoint(A,"A"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-002.png}
+\begin{eulercomment}
+Latihan 2\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Gambarlah titik B di koordinat (-3,-5)!
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(-7,3,-7,3);
+\end{eulerprompt}
+\begin{eulercomment}
+Langkah pertama yaitu membuat bidang koordinat dengan x1=-7, x2=3,
+y1=-7, y2=3. bidang koordinat ini menentukan x dan y dengan x1
+menunjukkan batas terkecil dan x2 menunjukkan batas terbesar sumbu x
+sedangkan y1 menunjukkan batas terkecil dan y2 menunjukkan batas
+terbesar sumbu y. 
+\end{eulercomment}
+\begin{eulerprompt}
+>B=[-3,-5]; plotPoint(B,"B"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-003.png}
+\begin{eulercomment}
+Langkah kedua yaitu memulis titik B dengan memanggil plotPoint dengan
+menggambar titik B dengan memberi nama "B". Titik B ini (-3,-5) dengan
+x =-3 dan y=-5.
+
+Latihan 3\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Gambarlah 4 di titik C (2,7), titik D (-3,-5), titik E (-4,6), titik F
+(2,-4) di bidang koordinat!
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(7);
+\end{eulerprompt}
+\begin{eulercomment}
+Langkah pertama adalah menggambar bidang koordinatnya, disini saya
+mengambil batas 7 di setiap sumbunya
+\end{eulercomment}
+\begin{eulerprompt}
+>C=[2,7]; D=[-3,-5]; E=[-4,6]; F=[2,-4]; // mendefinisikan 3 titik
+\end{eulerprompt}
+\begin{eulercomment}
+Langkah kedua yaitu menulis ketiga titik, titik yang diambil bisa di
+jadikan satu perintah dengan menulis titik C dilanjut titik dua dan
+spasi kemudian tulis titik berikutnya
+\end{eulercomment}
+\begin{eulerprompt}
+> plotPoint(C,"C"); plotPoint(D,"D"); plotPoint(E,"E"); plotPoint(F,"F"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-004.png}
+\begin{eulercomment}
+Langkah terakhir yaitu memanggil fungsi plotPoint. Menggambar titik
+ini bisa dijadikan satu perintah juga.
+
+Latihan 4\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Tentukan jarak antara titik P dan titik Q!\\
+Titik P = (0,-5)\\
+Titik Q = (-5,0)
+\end{eulercomment}
+\begin{eulerprompt}
+> setPlotRange(-6,1,-6,1);
+\end{eulerprompt}
+\begin{eulercomment}
+Langkah pertama adalah menggambar bidang koordinatnya terlebih dahulu
+\end{eulercomment}
+\begin{eulerprompt}
+> P=[0,-5]; Q=[-5,0]; // mendefinisikan titik
+\end{eulerprompt}
+\begin{eulercomment}
+Langkah kedua yaitu mendefinisikan titik dengan menulis titiknya.
+\end{eulercomment}
+\begin{eulerprompt}
+> plotPoint(P,"P"); plotPoint(Q,"Q"): //menggambarkan titik
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-005.png}
+\begin{eulercomment}
+Langkah ketiga adalah menggambar titik, seperti pada latihan di atas
+cara menggambar titik adalah dengan plotPoint
+\end{eulercomment}
+\begin{eulerprompt}
+>distance(P,Q) // menentukan jarak P dan Q
+\end{eulerprompt}
+\begin{euleroutput}
+  7.07106781187
+\end{euleroutput}
+\begin{eulercomment}
+Langkah terakhir adalah dengan fungsi distance. Fungsi distance
+digunakan untuk menentukan jarak antara titik 1 dengan titik lainnya
+
+Cara manual untuk menentukan jarak P dan Q adalah dengan rumus
+phytagoras
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+A = -5, B =-5, C= ?
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+\sqrt{50}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+5\sqrt{2} atau sekitar 7,07107
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Latihan 5\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Tentukan titik tengah RS!\\
+Titik R = (5,1)\\
+Titik S = (3,6)
+\end{eulercomment}
+\begin{eulerprompt}
+>R=[5,1]; S=[3,6]; //mendefinisikan titik R dan S
+>middlePerpendicular(R,S)
+\end{eulerprompt}
+\begin{euleroutput}
+  [2,  -5,  -9.5]
+\end{euleroutput}
+\begin{eulercomment}
+Latihan 6\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Tentukan kuadrat jarak titik R dan titik T!
+\end{eulercomment}
+\begin{eulerprompt}
+>R=[5,1]; S=[3,6];
+>distanceSquared(R,S)
+\end{eulerprompt}
+\begin{euleroutput}
+  29
+\end{euleroutput}
+\begin{eulercomment}
+Latihan 7\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Tentukan kuadrat jarak titik R dan titik S!
+\end{eulercomment}
+\begin{eulerprompt}
+>R=[5,1]; S=[3,6]; 
+>quadrance(R,S)
+\end{eulerprompt}
+\begin{euleroutput}
+  29
+\end{euleroutput}
+\eulersubheading{Contoh 1}
+\begin{eulerprompt}
+>setPlotRange(0,9,0,9);
+>S=[3,4]; plotPoint(A,"A");
+>V=[0.5,5]; plotPoint(B,"B");
+>T=[1,1]; plotPoint(C,"C"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-006.png}
+\begin{eulerprompt}
+>color(3); plotSegment(A,B,"AB"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-007.png}
+\begin{eulerprompt}
+>color(8); plotSegment(B,C,"BC"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-008.png}
+\eulersubheading{Menggambar Ruas Garis}
+\begin{eulercomment}
+Ruas Garis adalah sebagian dari garis yang dibatasi oleh dua titik
+ujung yang berbeda, dan memuat semua titik pada garis di antara
+ujung-ujungnya. Ruas garia memiliki titik awal dan titik akhir.
+
+Dalam latihan 8 kita menggambar ruas garis
+
+Apabila kita ingin menambahkan warna pada ruas garis dengan rumu pada
+fungsi yaitu
+\end{eulercomment}
+\begin{eulerprompt}
+>color(2); plotSegment(A,C,"AC"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-009.png}
+\begin{eulercomment}
+Latihan 1\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Gambarlah ruas garis dengan titik A (0,5) dan titik B (1,5)!
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(5);
+\end{eulerprompt}
+\begin{eulercomment}
+Membuat koordinat dengan setPlotRange (5)
+\end{eulercomment}
+\begin{eulerprompt}
+>A=[0,5]; plotPoint(A,"A"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-010.png}
+\begin{eulercomment}
+Menentukan titik A dan menggambar titik A
+\end{eulercomment}
+\begin{eulerprompt}
+>B=[1,5]; plotPoint(B,"B"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-011.png}
+\begin{eulercomment}
+Menentukan titik B dan menggambar titik B menggunakan fungsi plotPoint
+\end{eulercomment}
+\begin{eulerprompt}
+>plotSegment(A,B,"AB",3):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-012.png}
+\begin{eulercomment}
+Menggambar ruas garis dengan batas titik A (0,5) dan titik B (1,5)!
+
+Latihan 2\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Gambarlah ruas garis dengan titik C (6,8) dan titik D (8,6)!
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(10);
+\end{eulerprompt}
+\begin{eulercomment}
+Membuat garis kartesius/ bidang koordinat
+\end{eulercomment}
+\begin{eulerprompt}
+> C=[6,8]; D=[8,6]; plotPoint(C,"C"); plotPoint(D,"D"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-013.png}
+\begin{eulercomment}
+Menentukan titik dan menggambar titik C dan D
+\end{eulercomment}
+\begin{eulerprompt}
+>plotSegment(C,D,"CD",20):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-014.png}
+\begin{eulercomment}
+Menggambar ruas garis CD dengan titik C(6,8) dan titik D(8,6) dengan
+jarak label dari ruas garis adalah 20
+
+Latihan 3\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Tentukan titik tengah di ruas AB, jika diketahui titik A(0,2), titik
+B(6,2)!
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(10);
+\end{eulerprompt}
+\begin{eulercomment}
+Langkah pertama adalah dengan membuat bidang koordinatnya
+\end{eulercomment}
+\begin{eulerprompt}
+>A=[0,2]; plotPoint(A,"A"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-015.png}
+\begin{eulercomment}
+Langkah kedua dan ketiga adalah mendefisikan dan menggambar titiknya
+\end{eulercomment}
+\begin{eulerprompt}
+>B=[6,2]; plotPoint(B,"B"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-016.png}
+\begin{eulerprompt}
+>plotSegment(A,B,"c"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-017.png}
+\begin{eulercomment}
+Kemudian menggambar ruas garis yang melalui 2 titik yaitu A dan B 
+\end{eulercomment}
+\begin{eulerprompt}
+>h= middlePerpendicular(A,B):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-018.png}
+\begin{eulercomment}
+Selanjutnya buat garis h yang tegak lurus ruas garis AB dan memotong
+tepat di tengah ruas garis AB
+\end{eulercomment}
+\begin{eulerprompt}
+>plotLine(h):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-019.png}
+\begin{eulercomment}
+Gambar garis h
+\end{eulercomment}
+\begin{eulerprompt}
+>D=lineIntersection(h,lineThrough(A,B)):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-020.png}
+\begin{eulercomment}
+Menentukan titik potong garis AB 
+\end{eulercomment}
+\begin{eulerprompt}
+>plotPoint(D,value=1):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-021.png}
+\begin{eulercomment}
+Menggambar titik potongnya
+
+\end{eulercomment}
+\eulersubheading{Menggambar Garis}
+\begin{eulercomment}
+Sebuah garis dipikirkan sebagai suatu himpunan titik berderet yang
+panjang tak terbatas , tetapi tidak memiliki lebar. Sebuah garis
+direpresentasikan dengan sebuah gambar sinar dengan mata di kedua
+ujungnya yang menunjukkan bahwa garis tersebut tak berakhir.
+
+Sebuah garis itu lurus sempurna, tidak memiliki ketebalan. Garis bisa
+dimodelkan sebagai garis lurus yang tidak ada awalan dan akhirannya.
+
+Latihan 1\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Gambarlah garis dengan persamaan 5x+2y=7!\\
+Persamaan 5x+2y=7 bisa dituliskan sebagai [5,2,7]
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(0,10,0,10);
+\end{eulerprompt}
+\begin{eulercomment}
+Lankah pertama adalah menentukan batas koordinat yaitu x1=0
+,x2=10,y1=0 dan y2=10
+\end{eulercomment}
+\begin{eulerprompt}
+>plotLine([5,2,7],"g",10):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-022.png}
+\begin{eulercomment}
+Menentukan garis dengan fungsi plotline(persamaan garis,"label",jarak
+label)
+
+Latihan 2\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Gambarlah garis yang melalui titik C (2,3) dan titik D(1,4)!
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(0,7,0,7);
+\end{eulerprompt}
+\begin{eulercomment}
+Langkah pertama adalah menggambar bidang kartesius terlebih dahulu
+\end{eulercomment}
+\begin{eulerprompt}
+>C=[2,3]; D=[1,4];
+\end{eulerprompt}
+\begin{eulercomment}
+Menentukan titik C dan titik D
+\end{eulercomment}
+\begin{eulerprompt}
+>g=$lineThrough(C,D)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\left[ -\left(D-C\right)_{2} , \left(D-C\right)_{1} , \left[ -
+ \left(D-C\right)_{2} , \left(D-C\right)_{1} \right] \cdot C \right] 
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Latihan 3\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Tentukan vektor arah (gradien) garis g!
+\end{eulercomment}
+\begin{eulerprompt}
+>$getLineDirection(g)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\left[ g_{2} , -g_{1} \right] 
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Latihan 4\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Menentukkan garis yang melalui titik A (3,4) dan tegak lurus terhadap
+garis (g) 
+\end{eulercomment}
+\begin{eulerprompt}
+>$h=perpendicular(A,g)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+h=\left[ g_{2} , -g_{1} , \left[ g_{2} , -g_{1} \right] \cdot A
+  \right] 
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Latihan 5\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Menentukan garis yang melalui titik dan sejajar terhadap garis g
+\end{eulercomment}
+\begin{eulerprompt}
+>$m=parallel(A,g)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+m=\left[ g_{1} , g_{2} , \left[ g_{1} , g_{2} \right] \cdot A
+  \right] 
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Latihan 6\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Menentukan titik potong dua garis, yaitu garis g dan garis h
+\end{eulercomment}
+\begin{eulerprompt}
+>$lineIntersection(g,h)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\left[ \frac{g_{2}\,h_{3}-h_{2}\,g_{3}}{h_{1}\,g_{2}-g_{1}\,h_{2}}
+  , \frac{h_{1}\,g_{3}-g_{1}\,h_{3}}{h_{1}\,g_{2}-g_{1}\,h_{2}}
+  \right] 
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Latihan 7\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Menentukan proyeksi titik A pada garis g
+\end{eulercomment}
+\begin{eulerprompt}
+>$projectToLine(A,g)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\left[ \frac{g_{2}\,\left[ g_{2} , -g_{1} \right] \cdot A-g_{1}\,
+ \left[ -g_{1} , -g_{2} \right] \cdot A}{g_{2}^2+g_{1}^2} , \frac{-g
+ _{1}\,\left[ g_{2} , -g_{1} \right] \cdot A-g_{2}\,\left[ -g_{1} , -
+ g_{2} \right] \cdot A}{g_{2}^2+g_{1}^2} \right] 
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Latihan 8\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Menentukkan garis dengan titik F(7,2), dan A(3,4) dan jarak label 10!
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(0,10,0,10)
+\end{eulerprompt}
+\begin{euleroutput}
+  [0,  10,  0,  10]
+\end{euleroutput}
+\begin{eulercomment}
+Menentukan bidang kartesius dengan batas terkecil x maupun y yaitu 0
+dan batas terbesar x maupun y yaitu 10
+\end{eulercomment}
+\begin{eulerprompt}
+>F=[7,2]; A:=[3,4];
+\end{eulerprompt}
+\begin{eulercomment}
+Menentukkan titik F dan titik A
+\end{eulercomment}
+\begin{eulerprompt}
+>m=middlePerpendicular(F,A);
+\end{eulerprompt}
+\begin{eulercomment}
+Membuat garis FA denngan fungsi middlePerpendicular
+\end{eulercomment}
+\begin{eulerprompt}
+>plotLine(m,"m",10):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-029.png}
+\begin{eulercomment}
+Menggambar garis dan jarak label menggunakan fungsi plotLine
+
+Latihan 8\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Gambar garis sumbu ruas AB dengan titik A(2,2) dan B(-1,-2)!
+\end{eulercomment}
+\begin{eulerprompt}
+>A=[2,2]; B=[-1,-2]; // menentukan titik titiknya
+>c1=circleWithCenter(A,distance(A,B)); //membuat lingkaran dengnan pusat A dan jari jari r
+>c2=circleWithCenter(B,distance(A,B));
+>\{P1,P2,f\}=circleCircleIntersections(c1,c2);
+>l=lineThrough(P1,P2);
+>setPlotRange(5); plotCircle(c1); plotCircle(c2):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-030.png}
+\begin{eulerprompt}
+>plotPoint(A); plotPoint(B); plotSegment(A,B); plotLine(l):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-031.png}
+\eulersubheading{Contoh 1}
+\begin{eulercomment}
+Apabila ingin menggambar garis kita dapat menggunakan rumus sebagai
+berikut:
+
+\end{eulercomment}
+\begin{eulerprompt}
+>n=angleBisector(A,B,C); color(7); plotLine(n):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-032.png}
+\eulersubheading{Menggambar Bidang/ segibanyak}
+\begin{eulercomment}
+Bidang adalah permukaan rata dan tentu batasnya. Bidang didefinisikan
+sebagai permukaan datar yang didefinisikan oleh serangkaian garis yang
+tidak berpotongan
+
+Dengan contoh 1 kita dapat menggambar segibanyak
+
+\end{eulercomment}
+\eulersubheading{Segilima}
+\begin{eulercomment}
+Langkah pertama adalah menggambar ketiga titik
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(-5,5,-5,5); O=[0,0]; plotPoint(O,"O"); A=[0,4]; plotPoint(A,"A"); B=turn(A,-72°); plotPoint(B,"B"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-033.png}
+\eulersubheading{Segienam}
+\begin{eulerprompt}
+>setPlotRange(-8,8,-8,8); O=[0,0]; plotPoint(O,"O"); A=[-2.3,4]; plotPoint(A,"A"); B=turn(A,-60°); plotPoint(B,"B"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-034.png}
+\eulersubheading{Segitujuh}
+\begin{eulerprompt}
+>setPlotRange(-5,8,-5,5); O=[0,0]; plotPoint(O,"O"); A=[0,4]; plotPoint(A,"A"); B=turn(A,-360°/7); plotPoint(B,"B"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-035.png}
+\begin{eulerprompt}
+>setPlotRange(-5,5,-5,5);
+>Q=[-2,4]; plotPoint(Q,"Q");
+>R=[1,4]; plotPoint(R, "R");
+>S=[2,2]; plotPoint(S, "S");
+>T=[-3,2]; plotPoint(T, "T");
+>M=[-2,0]; plotPoint(M, "M");
+>N=[1,0]; plotPoint(N, "N"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-036.png}
+\begin{eulerprompt}
+>color(2); plotSegment(Q,R," "); plotSegment(S,R," ");  plotSegment(S,T," "); plotSegment(Q,T," "):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-037.png}
+\begin{eulercomment}
+Langkah kedua adalah menggambar garis AC, BC, AC
+\end{eulercomment}
+\begin{eulerprompt}
+>plotSegment(Q,R," ");
+>plotSegment(R,S," ");
+>plotSegment(S,T," ");
+>plotSegment(T,Q," "):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-038.png}
+\eulerheading{Trapesium Sama Kaki}
+\begin{eulercomment}
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(-5,5,-5,5)
+\end{eulerprompt}
+\begin{euleroutput}
+  [-5,  5,  -5,  5]
+\end{euleroutput}
+\begin{eulerprompt}
+>Q=[-2,4]; plotPoint(Q,"Q")
+>R=[1,4]; plotPoint(R, "R")
+>S=[2,2]; plotPoint(S, "S");
+>T=[-3,2]; plotPoint(T, "T"); 
+>M=[-2,0]; plotPoint(M, "M");
+>N=[1,0]; plotPoint(N, "N"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-039.png}
+\begin{eulerprompt}
+>color(2); plotSegment(Q,R," "); plotSegment(S,R," "); plotSegment(S,T," "); plotSegment(Q,T," "):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-040.png}
+\begin{eulerprompt}
+>color(5); plotSegment(Q,R," "); plotSegment(R,S," ");  plotSegment(S,N," "); plotSegment(N,M," "); plotSegment(M,T," "); plotSegment(T,Q," "):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-041.png}
+\begin{eulercomment}
+.....
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(-5,17,-5,17); //mendefinisikan bidang koordinat
+>A=[-3,5]; B=[-3,15]; C=[5,5]; D=[5,15]; //mendefinisikan dan menggambar 4 titik
+>plotPoint(A,"A"); plotPoint(B,"B"); plotPoint(C,"C"); plotPoint(D,"D");
+\end{eulerprompt}
+\begin{eulercomment}
+Menggambar 4 titik
+\end{eulercomment}
+\begin{eulerprompt}
+>plotSegment(A,B,"a"); plotSegment(B,D,"b"); plotSegment(C,D,"c"); plotSegment(A,C,"d"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-042.png}
+\begin{eulercomment}
+Membuat ulang garis A,B dan C
+
+Latihan 2\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Menggambarkan segitiga siku siku dengan titik D(2,4), E(2,8), F(6,4)!
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(-5,10,-5,10);
+\end{eulerprompt}
+\begin{eulercomment}
+Menentukan gambar bidang kartesius
+\end{eulercomment}
+\begin{eulerprompt}
+>D=[2,4]; E=[2,8]; F=[6,4];
+\end{eulerprompt}
+\begin{eulercomment}
+Menentukan 3 titik D,E dan F
+\end{eulercomment}
+\begin{eulerprompt}
+>plotPoint(D,"D"); plotPoint(E,"E"); plotPoint(F,"F"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-043.png}
+\begin{eulercomment}
+Menggambar 3 titik
+\end{eulercomment}
+\begin{eulerprompt}
+>plotSegment(D,E,"DE",10); plotSegment(E,F,"EF",10); plotSegment(F,A,"FA",10):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-044.png}
+\begin{eulercomment}
+membuat 3 garis yaitu DE,EF,FA dengan jarak label 10
+\end{eulercomment}
+\begin{eulercomment}
+Latihan 3\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Gambar dan tebaklah suatu bidang dengan titik A(-2,-5),B(2,-5),C(2,-1)
+dan D(-2,-1)
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(-5,10,-5,10); // membuat bidang kartesius
+>A=[-2,-5]; B=[2,-5]; C=[2,-1]; D=[-2,-1]; // menentukan titik
+>plotPoint(A,"A"); plotPoint(B,"B"); plotPoint(C,"C"); plotPoint(D,"D"): // menggambar titik
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-045.png}
+\begin{eulerprompt}
+>plotSegment(A,B,"a",10); plotSegment(B,C,"b",10); plotSegment(C,D,"c"); plotSegment(D,A,"d"): // menggambar garis
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-046.png}
+\begin{eulercomment}
+Latihan 4\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Gambarlah objek geometri segitiga dengan 3 titik yaitu A (1,0), B(0,1)
+dan C (2,2)!
+
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(-0.5,2.5,-0.5,2.5); // mendefinisikan bidang koordinat baru
+>A=[1,0]; plotPoint(A,"A"); // definisi dan gambar tiga titik
+>B=[0,1]; plotPoint(B,"B");
+>C=[2,2]; plotPoint(C,"C");
+>plotSegment(A,B,"c"); // c=AB
+>plotSegment(B,C,"a"); // a=BC
+>plotSegment(A,C,"b"); // b=AC
+>lineThrough(B,C) // garis yang melalui B dan C
+\end{eulerprompt}
+\begin{euleroutput}
+  [-1,  2,  2]
+\end{euleroutput}
+\begin{eulerprompt}
+>h=perpendicular(A,lineThrough(B,C)); // garis h tegak lurus BC melalui A
+>D=lineIntersection(h,lineThrough(B,C)); // D adalah titik potong h dan BC
+>plotPoint(D,value=1); // koordinat D ditampilkan
+>aspect(1); plotSegment(A,D): // tampilkan semua gambar hasil plot...()
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-047.png}
+\begin{eulerprompt}
+>l=angleBisector(A,C,B): // garis bagi <ACB
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-048.png}
+\begin{eulerprompt}
+>g=angleBisector(C,A,B): // garis bagi <CAB
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-049.png}
+\begin{eulerprompt}
+>P=lineIntersection(l,g) // titik potong kedua garis bagi sudut
+\end{eulerprompt}
+\begin{euleroutput}
+  [0.86038,  0.86038]
+\end{euleroutput}
+\eulersubheading{Segitiga Siku-siku}
+\begin{eulercomment}
+Langkah pertama dalam menggambarkan objek objek geometri yaitu membuat
+perintah untuk geometry dengan "load geometry".
+\end{eulercomment}
+\begin{eulerprompt}
+>load geometry
+\end{eulerprompt}
+\begin{euleroutput}
+  Numerical and symbolic geometry.
+\end{euleroutput}
+\begin{eulercomment}
+Langkah kedua kita akan menentukan rentang sumbu terlebih dahulu
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(-5,8,-5,8):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-050.png}
+\begin{eulercomment}
+Langkah ketiga adalah menentukan ketiga titik bidang koordinat
+\end{eulercomment}
+\begin{eulerprompt}
+>A=[6,0]; plotPoint(A,"A"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-051.png}
+\begin{eulerprompt}
+>B=[2,0]; plotPoint(B,"B"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-052.png}
+\begin{eulerprompt}
+>C=[2,6]; plotPoint(C,"C"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-053.png}
+\begin{eulercomment}
+Langkah keempat menggambar ruas garis di ketiga titik
+\end{eulercomment}
+\begin{eulerprompt}
+>plotSegment(A,B,"c"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-054.png}
+\begin{eulerprompt}
+>plotSegment(B,C,"a"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-055.png}
+\begin{eulerprompt}
+>plotSegment(A,C,"b"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-056.png}
+\begin{eulercomment}
+Langkah kelima menghitung luas segitiga siku siku
+\end{eulercomment}
+\begin{eulerprompt}
+>areaTriangle(A,B,C)
+\end{eulerprompt}
+\begin{euleroutput}
+  12
+\end{euleroutput}
+\begin{eulercomment}
+membuktikan menggunakan perintah manual:
+\end{eulercomment}
+\begin{eulerprompt}
+>norm(A-B) // menghitung panjaang alas dari panjang garis AB 
+\end{eulerprompt}
+\begin{euleroutput}
+  4
+\end{euleroutput}
+\begin{eulerprompt}
+>norm(B-C) // menghitung panjang tinggi dari panjang garis BC
+\end{eulerprompt}
+\begin{euleroutput}
+  6
+\end{euleroutput}
+\begin{eulerprompt}
+>norm(A-B)*norm(B-C)/2
+\end{eulerprompt}
+\begin{euleroutput}
+  12
+\end{euleroutput}
+\begin{eulercomment}
+Hasilnya sesuai dengan perintah menggunakan fungi geometri yang
+bernilai 12 satuan
+\end{eulercomment}
+\eulersubheading{Menggambar Lingkaran}
+\begin{eulercomment}
+Lingkaran adalah tempat kedudukan/himpunan titik-titik yang berjarak
+sama terhadap suatu titik tertentu. Jarak yang sama disebut panjang
+jari-jari linngkaran dan titik tertentu disebut pusat lingkaran.
+
+Contoh 1:\\
+Melanjutkan dari luas segitiga siku siku Gambar suatu lingkaran yang
+mengelilingi segitiga siku siku ABC.
+\end{eulercomment}
+\begin{eulerprompt}
+>m=circleThrough(A,B,C);
+>R=getCircleRadius(m):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-057.png}
+\begin{eulerprompt}
+>O=getCircleCenter(m):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-058.png}
+\begin{eulerprompt}
+>plotPoint(O,"O"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-059.png}
+\begin{eulerprompt}
+> plotCircle(1,"Lingkaran Luar m"):
+\end{eulerprompt}
+\begin{euleroutput}
+  Index 3 out of bounds!
+  Try "trace errors" to inspect local variables after errors.
+  plotCircle:
+      t=linspace(0,2pi,100*floor(max(1,c[3])));
+\end{euleroutput}
+\begin{eulercomment}
+Langkah kedua yaitu menentukan jari jari lingkaran
+\end{eulercomment}
+\begin{eulerprompt}
+>R
+\end{eulerprompt}
+\begin{euleroutput}
+  3.60555127546
+\end{euleroutput}
+\begin{eulercomment}
+Langkah ketiga yaitumenghitung luas lingkaran luar m
+\end{eulercomment}
+\begin{eulerprompt}
+>pi*(3.605551275462)^2
+\end{eulerprompt}
+\begin{euleroutput}
+  40.8407044966
+\end{euleroutput}
+\begin{eulerformula}
+\[
+L_{m}= \pi \times r^2
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+L_{m}= \pi \times 3.60555127546^2
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+L_{m}= 40.8407044966
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Jadi luas lingkaran luar m adalah  40.8407044966 satuan
+
+Latihan 1\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulerprompt}
+>setPlotRange(20);
+>P=[5,5]; r=[14];
+>plotCircle(circleWithCenter(P,r),"Lingkaran"); // gambar lingkaran
+\end{eulerprompt}
+\begin{eulercomment}
+Cari titik pusat lingkaran dan jari jari lingkaran
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(20);
+>P=[1,3]; plotPoint(P,"P");
+>L=[-1,-3]; plotPoint(L,"L"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-060.png}
+\begin{eulerprompt}
+>c1=circleWithCenter(P,distance(P,L)); plotCircle(c1);
+>plotSegment(P,L," "):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-061.png}
+\begin{eulercomment}
+Latihan 2\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Buatlah lingkaran yang melalui tiga titik yaitu titik A (0,2), B(4,2)
+dan C(2,4)!
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(-1,6,-1,6); // menentukan rentang x dan y pada bidang koordinat
+>A=[0,2]; plotPoint(A,"A"); 
+>B=[4,2]; plotPoint(B,"B");
+>C=[2,4]; plotPoint(C,"C");
+>c=circleThrough(A,B,C); // luar lingkaran ABC
+>o=getCircleCenter(c); // menentukan titik pusat lingkaran
+>plotCircle(c, "luar lingkaran ABC"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-062.png}
+\begin{eulercomment}
+Latihan 3\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Gambarlah lingkaran yang melalui titik A (0,2), B (-2,-1), C (0,3) dan
+tentukan titik pusatnya!
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(-10,8,-10,8):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-063.png}
+\begin{eulercomment}
+Langkah pertama yaitu menentukan batas tiap sumbu bidang koordinatnya
+\end{eulercomment}
+\begin{eulerprompt}
+>A = [0,2]; B = [-2,-1]; C = [0,3];
+\end{eulerprompt}
+\begin{eulercomment}
+Langkah kedua menentukan titiknya
+\end{eulercomment}
+\begin{eulerprompt}
+>plotPoint(A,"A"); plotPoint(B,"B"); plotPoint(C,"C")
+\end{eulerprompt}
+\begin{eulercomment}
+Langkah ketiga yaitu menggambar ketiga titiknya
+\end{eulercomment}
+\begin{eulerprompt}
+>c = circleThrough(A,B,C);
+\end{eulerprompt}
+\begin{eulercomment}
+Langkah keempat merupakan fungsi lingkaran pada titik A,B dan C
+\end{eulercomment}
+\begin{eulerprompt}
+>P = getCircleCenter(c);
+\end{eulerprompt}
+\begin{eulercomment}
+Langkah kelima adalah menentukan titik pusat lingkarannya, caranya
+dengan fungsi getCircleCenter(A,B,C)
+\end{eulercomment}
+\begin{eulerprompt}
+>plotPoint(P,"P"); 
+\end{eulerprompt}
+\begin{eulercomment}
+Langkah keenam yaitu menggambar titik pusatnya
+\end{eulercomment}
+\begin{eulerprompt}
+>plotCircle(c,"Lingkaran c"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-064.png}
+\begin{eulercomment}
+Langkah terakhir yaitu memanggil lingkaran dan memberi label
+"lingkaran c"
+
+Latihan 4\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulerprompt}
+>setPlotRange(-5,5,-5,5); 
+\end{eulerprompt}
+\begin{eulercomment}
+Membuat bidang kartesiusnya
+\end{eulercomment}
+\begin{eulerprompt}
+>A=[0,2]; plotPoint(A,"A"): //mendefinisikan titik dan gambarnya
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-065.png}
+\begin{eulerprompt}
+>B=[4,2]; plotPoint(B,"B"): 
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-066.png}
+\begin{eulerprompt}
+>C=[2,4]; plotPoint(C,"C"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-067.png}
+\begin{eulerprompt}
+>c=circleThrough(A,B,C): //lingkaran melalui 3 titik
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-068.png}
+\begin{eulerprompt}
+>o=getCircleCenter(c): // menentukan pusat lingkaran c
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-069.png}
+\begin{eulerprompt}
+>plotCircle(c): //Menggambar lingkaran c dengan label nama "c"
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-070.png}
+\begin{eulerprompt}
+>o
+\end{eulerprompt}
+\begin{euleroutput}
+  [2,  2]
+\end{euleroutput}
+\begin{eulercomment}
+Latihan 5\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Gambarlah lingkaran jika diketahui 3 titik yang membentuk segitiga
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(5)
+\end{eulerprompt}
+\begin{euleroutput}
+  [-5,  5,  -5,  5]
+\end{euleroutput}
+\begin{eulerprompt}
+>A::=[-1,-1]; B::=[2,0]; C::=[1,2];
+>plotPoint(A,"A"); plotPoint(B,"B"); plotPoint(C,"C");
+>plotSegment(A,B,""); plotSegment(B,C,""); plotSegment(C,A,""):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-071.png}
+\begin{eulerprompt}
+>LL &= circleThrough(A,B,C); $getCircleEquation(LL,x,y)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\left(y-\frac{5}{14}\right)^2+\left(x-\frac{3}{14}\right)^2=\frac{
+ 325}{98}
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>O &= getCircleCenter(LL); $O
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\left[ \frac{3}{14} , \frac{5}{14} \right] 
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>plotCircle(LL()); plotPoint(O(),"O"):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-074.png}
+\begin{eulercomment}
+Latihan 6\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Menggambar lingkaran menggunakan plot 2D dengan menggunakan rumus umum
+lingkaran\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+x^2+y^2=r^2
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>aspect(1);
+>plot2d("x^2+y^2-4",r=3,level=1):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-075.png}
+\begin{eulerprompt}
+>aspect(2);
+>plot2d("((x^2)/4)+((y^2)/4)-1",r=10,level=4,contourcolor=red):
+\end{eulerprompt}
+\eulerimg{13}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-076.png}
+\eulersubheading{Menggambar Parabola}
+\begin{eulercomment}
+Parabola adalah garis lengkung datar yang berbentuk jika suatu bidang
+memotong kerucut sejajar dengan garis titik sudut puncak dengan salah
+satu titik pada keliling alas. Contohnya seperti antena tv berbentuk
+bundar seperti piring cekung yang dapat menangkap siaran jarak jauh.
+
+Contoh Parabola\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+x^2-2x-2y+5
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Gambar Parabolanya
+\end{eulercomment}
+\begin{eulerprompt}
+>aspect(1);
+>plot2d("x^2-2x-2y+5"): //parabola
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-077.png}
+\begin{eulercomment}
+Latihan 1\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Misalkan persamaan parabolanya\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+y=ax^2+bx+c
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Gambarlah bentuk parabolanya!
+\end{eulercomment}
+\begin{eulerprompt}
+>function f(x) &=a*x^2+b*x+c;
+>setPlotRange(-5,6,-11,2);
+>A=[-2,0]; plotPoint(A,"A");
+>B=[5,0]; plotPoint(B,"B");
+>C=[2,0]; plotPoint(C,"C");
+>&powerdisp:true;
+>&f(-2)=0
+\end{eulerprompt}
+\begin{euleroutput}
+  
+                            4 a - 2 b + c = 0
+  
+\end{euleroutput}
+\begin{eulerprompt}
+>aspect(1)
+>plot2d("4*x^2-2*x+1"): //parabola
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-078.png}
+\begin{eulercomment}
+Latihan 2\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulerprompt}
+>setPlotRange(3)
+\end{eulerprompt}
+\begin{euleroutput}
+  [-3,  3,  -3,  3]
+\end{euleroutput}
+\begin{eulerprompt}
+>p &= getHesseForm(lineThrough(A,B),x,y,C)-distance([x,y],C); $p='0
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+-\sqrt{\left(1-x\right)^2+\left(2-y\right)^2}+\frac{2-x+3\,y}{
+ \sqrt{10}}=0
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>plot2d(p,level=0,add=1,contourcolor=2):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-080.png}
+\begin{eulercomment}
+Latihan 3\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulerformula}
+\[
+f(x)=x^2+5x+6
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>function f(x) := x^2+5x+6
+>aspect(2), plot2d("f(x)",-10,5):
+\end{eulerprompt}
+\eulerimg{13}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-081.png}
+\begin{eulercomment}
+Latihan 4\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulerprompt}
+>aspect(5);
+>plot2d("4x^2-9y^2"):
+\end{eulerprompt}
+\eulerimg{4}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-082.png}
+\eulerheading{Hiperbola}
+\begin{eulerprompt}
+>aspect(1);
+>plot3d("4x^2-9y^2-36"): //hiperbola
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-083.png}
+\begin{eulerprompt}
+>aspect(3);
+>plot3d("4*x^2-2*x+1"):
+\end{eulerprompt}
+\eulerimg{8}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-084.png}
+\begin{eulercomment}
+\end{eulercomment}
+\eulersubheading{Latihan}
+\begin{eulercomment}
+1. Gambarkan lingkaran luar dan dalam segitiga ABC dengan A(-7,-2),
+B(7,-4),C(11,8).
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(15);
+>A=[-7,-2]; plotPoint (A,"A"); // definisi dan menggambar ketiga titik
+>B=[7,-6]; plotPoint (B,"B"); 
+>C=[11,8]; plotPoint (C,"C");
+>plotSegment (A,B,"c"); // c=AB
+>plotSegment (B,C,"a"); // a=BC
+>plotSegment (C,A,"b"); // b=CA
+>m=circleThrough(A,B,C); // lingkaran luar segitiga
+>P=getCircleCenter(m); // titik pusat lingkaran m
+>R=getCircleRadius(m); // jari-jari lingkaran m
+>plotPoint(P,"P"); // gambar titik "P"
+>plotCircle(m,"Lingkaran luar segitiga ABC"):
+\end{eulerprompt}
+\eulerimg{8}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-085.png}
+\begin{eulerprompt}
+>l=angleBisector(A,C,B); // garis bagi <ACB
+>g=angleBisector(C,A,B); // garis bagi <CAB
+>P=lineIntersection(l,g) // titik potong kedua garis bagi sudut
+\end{eulerprompt}
+\begin{euleroutput}
+  [4.07107,  -0.727922]
+\end{euleroutput}
+\begin{eulerprompt}
+>color(5); plotLine(l); plotLine(g); color(1); // gambar kedua garis bagi sudut
+>plotPoint(P,"P"); // gambar titik potongnya
+>r=norm(P-projectToLine(P,lineThrough(A,B))) // jari-jari lingkaran dalam
+\end{eulerprompt}
+\begin{euleroutput}
+  4.26458963757
+\end{euleroutput}
+\begin{eulerprompt}
+>plotCircle(circleWithCenter(P,r),"Lingkaran dalam segitiga ABC"): // gambar lingkaran dalam
+\end{eulerprompt}
+\eulerimg{8}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-086.png}
+\begin{eulercomment}
+2. Diberikan ruas garis s melalui dua titik A dan titik B. Dengan
+koordinat titik A dan titik B berturut-turut (0,1) dan (7,1). Tentukan
+koordinat titik tengah ruas garis s!
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(10); //menggambar bidang kartesius
+>A=[0,1]; plotPoint(A,"A"): // membuat dan menggambar titik A dan B
+\end{eulerprompt}
+\eulerimg{8}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-087.png}
+\begin{eulerprompt}
+>B=[7,1]; plotPoint(B,"B"):
+\end{eulerprompt}
+\eulerimg{8}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-088.png}
+\begin{eulerprompt}
+>plotSegment(A,B,"s"): // menggambar garis dengan label s
+\end{eulerprompt}
+\eulerimg{8}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-089.png}
+\begin{eulerprompt}
+>h= middlePerpendicular(A,B): //titik tengah AB
+\end{eulerprompt}
+\eulerimg{8}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-090.png}
+\begin{eulerprompt}
+>plotLine(h): //garis melalui titik tengah 
+\end{eulerprompt}
+\eulerimg{8}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-091.png}
+\begin{eulerprompt}
+>D=lineIntersection(h,lineThrough(A,B)): // titik potong garis h dan garis yang melalui AB
+\end{eulerprompt}
+\eulerimg{8}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-092.png}
+\begin{eulerprompt}
+>plotPoint(D,value=1):
+\end{eulerprompt}
+\eulerimg{8}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-093.png}
+\begin{eulercomment}
+3. Diberikan dua garis yang melewati titik koordinat sebagai berikut:\\
+garis AB: titik A(-4,4) dan titik B(4,0)\\
+garis CD: titik C(0,0) dan titik D(0,2)\\
+tentukan koordinat titik potong kedua garis tersebut!
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(5); // menggambar bidang kartesius
+>A=[-4,4]; plotPoint(A,"A"): // membuat dan menggambar 3 titik
+\end{eulerprompt}
+\eulerimg{8}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-094.png}
+\begin{eulerprompt}
+>B=[4,0]; plotPoint(B,"B"):
+\end{eulerprompt}
+\eulerimg{8}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-095.png}
+\begin{eulerprompt}
+>C=[0,0]; plotPoint(C,"C"):
+\end{eulerprompt}
+\eulerimg{8}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-096.png}
+\begin{eulerprompt}
+>D=[0,2]; plotPoint(D,"D"):
+\end{eulerprompt}
+\eulerimg{8}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-097.png}
+\begin{eulerprompt}
+>plotSegment(A,B,"c"): // c=AB menggambar garis c dan b
+\end{eulerprompt}
+\eulerimg{8}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-098.png}
+\begin{eulerprompt}
+>plotSegment(C,D,"b"): // b=CD
+\end{eulerprompt}
+\eulerimg{8}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-099.png}
+\begin{eulerprompt}
+>lineThrough(A,B): // garis yang melalui titik A dan titik B
+\end{eulerprompt}
+\eulerimg{8}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-100.png}
+\begin{eulerprompt}
+>lineThrough(C,D): // garis yang melalui titik C dan titik D
+\end{eulerprompt}
+\eulerimg{8}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-101.png}
+\begin{eulerprompt}
+>E=lineIntersection(lineThrough(A,B),lineThrough(C,D));
+>plotPoint(E,value=1):
+\end{eulerprompt}
+\eulerimg{8}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-102.png}
+\begin{eulercomment}
+4. Gambarlah suatu parabola yang melalui 3 titik yang diketahui
+
+Petunjuk:\\
+- Misalkan persamaan bolanya y=ax\textasciicircum{}2+bx+c\\
+- Substitusikan koordinat titik titik yang diketahui ke persamaan
+berikut\\
+- Selesaikan SPL yang terbentuk untuk mendapatkan nilai nilai a,b,c
+\end{eulercomment}
+\begin{eulerprompt}
+>function f(x) &= a*x^2+b*x+c;
+>setPlotRange(-5,6,-11,2);
+>A=[-2,0]; plotPoint(A,"A");
+>B=[5,0]; plotPoint(B,"B");
+>C=[0,-10]; plotPoint(C,"C");
+>&powerdisp:true;
+>&f(-2)=0
+\end{eulerprompt}
+\begin{euleroutput}
+  
+                            4 a - 2 b + c = 0
+  
+\end{euleroutput}
+\begin{eulerprompt}
+>&f(5)=0
+\end{eulerprompt}
+\begin{euleroutput}
+  
+                            25 a + 5 b + c = 0
+  
+\end{euleroutput}
+\begin{eulerprompt}
+>&f(0)=-10
+\end{eulerprompt}
+\begin{euleroutput}
+  
+                                 c = - 10
+  
+\end{euleroutput}
+\begin{eulerprompt}
+>&solve([4*a-2*b-10=0,25*a+5*b-10=0],[a,b])
+\end{eulerprompt}
+\begin{euleroutput}
+  
+                            [[a = 1, b = - 3]]
+  
+\end{euleroutput}
+\begin{eulerprompt}
+>plot2d("x^2-3*x-10",r=15,xmax=6,xmin=-3); plot2d(-2,0,>add,>points); plot2d(5,0,>add,>points); plot2d(1.5,-12):
+\end{eulerprompt}
+\eulerimg{8}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-103.png}
+\begin{eulercomment}
+5. Gambarlah suatu ellips jika diketahui kedua titik fokusnya,
+misalkan P dan Q. Ingat ellips fokus P dan Q adalah tempat kedudukan
+titik-titik yang jumlah jarak ke P dan ke Q selalu sama (konstan).\\
+elesaikan SPL yang terbentuk untuk mendapatkan nilai nilai a,b,c
+\end{eulercomment}
+\begin{eulerprompt}
+>P= [-1,0];
+>Q= [1,0];
+>distance(P,Q)
+\end{eulerprompt}
+\begin{euleroutput}
+  2
+\end{euleroutput}
+\begin{eulerprompt}
+>t=linspace(0,2pi,1000); plot2d(1*distance(P,Q)*cos(t),sin(t),r=3);
+>plot2d(-1,0,>add,>points); plot2d(1,0,>add,>points):
+\end{eulerprompt}
+\eulerimg{8}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-104.png}
+\begin{eulercomment}
+6. Gambarlah suatu hiperbola jika diketahui kedua titik fokusnya,
+misalnya P dan Q. Ingat ellips dengan\\
+fokus P dan Q adalah tempat kedudukan titik-titik yang selisih jarak
+ke P dan ke Q selalu sama (konstan). 
+\end{eulercomment}
+\begin{eulerprompt}
+>P=[-2,0];
+>Q=[2,0];
+>t=linspace(-5,5,1000); plot2d(cosh(t),sinh(t),r=3); plot2d(-cosh(t),-sinh(t),>add):
+\end{eulerprompt}
+\eulerimg{8}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_menggambar objek geometry_ Geometry_Aplikom-105.png}
+\begin{eulerprompt}
+> 
+\end{eulerprompt}
+\end{eulernotebook}
+\end{document}

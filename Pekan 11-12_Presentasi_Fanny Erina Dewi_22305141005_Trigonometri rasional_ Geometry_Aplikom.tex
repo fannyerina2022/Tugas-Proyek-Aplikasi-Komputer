@@ -1,0 +1,798 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{eumat}
+
+\begin{document}
+\begin{eulernotebook}
+\begin{eulerprompt}
+>load geometry
+\end{eulerprompt}
+\begin{euleroutput}
+  Numerical and symbolic geometry.
+\end{euleroutput}
+\eulersubheading{}
+\begin{eulercomment}
+Nama: Fanny Erina Dewi\\
+NIM: 22305141005\\
+Kelas: Matematika B 22\\
+\end{eulercomment}
+\eulersubheading{}
+\eulerheading{TRIGONOMETRI RASIONAL}
+\begin{eulercomment}
+Trigonometri Rasional adalah cabang matematika yang mempelajari
+fungsi-fungsi trigonometri yang dapat dinyatakan dalam bentuk pecahan
+rasional. Fungsi-fungsi ini dapat dinyatakan sebagai pecahan dari dua
+polinomial, yaitu polinomial pembilang dan penyebut. Contoh fungsi
+trigonometri rasional adalah 1/cos (x)
+
+Perhitungan rasional simbolis sering kali menghasilkan hasil yang
+sederhana. Sebaliknya, trigonometri klasik menghasilkan hasil
+trigonometri yang rumit, yang mengevaluasi ke pendekatan numerik saja.
+\end{eulercomment}
+\begin{eulerprompt}
+>load geometry;
+\end{eulerprompt}
+\begin{eulercomment}
+Langkah awal adalah dengan menyalakan perintah awal pada materi
+geometri. Perintah di atas merupakan perintah Euler untuk memplot
+geometri bidang yang terdapat dalam file Euler "geometry.e".
+\end{eulercomment}
+\begin{eulerprompt}
+>C&:=[0,0]; A&:=[12,0]; B&:=[0,5];...
+>setPlotRange(-1,15,-1,15); ...
+>plotPoint(A,"A"); plotPoint(B,"B"); plotPoint(C,"C"); ...
+>plotSegment(B,A,"c"); plotSegment(A,C,"b"); plotSegment(C,B,"a"); ...
+>insimg(30);
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_Trigonometri rasional_ Geometry_Aplikom-001.png}
+\begin{eulercomment}
+Saya menggunakan segitiga dengan proporsi 5,12,13. 
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\sin(w_a)=\frac{a}{c},
+\]
+\end{eulerformula}
+\begin{eulercomment}
+di mana wa adalah sudut di A. Cara biasa untuk menghitung sudut ini,
+adalah dengan melakukan invers dari fungsi sinus. Hasilnya adalah
+sudut yang tidak dapat dicerna, yang hanya dapat dicetak secara
+perkiraan.
+\end{eulercomment}
+\begin{eulerprompt}
+>wa := arcsin(3/5); degprint(wa)
+\end{eulerprompt}
+\begin{euleroutput}
+  36°52'11.63''
+\end{euleroutput}
+\begin{eulercomment}
+Trigonometri rasional mencoba menghindari hal ini.
+
+Gagasan pertama trigonometri rasional adalah kuadran, yang
+menggantikan jarak. Sebenarnya, itu hanya kuadrat jarak. Berikut ini,
+a, b, dan c menunjukkan kuadrat dari sisi-sisinya.
+
+Teorema Pythogoras menjadi a+b=c.
+\end{eulercomment}
+\begin{eulerprompt}
+>a &= 5^2; b &= 12^2; c &= 13^2; &a+b=c
+\end{eulerprompt}
+\begin{euleroutput}
+  
+                                169 = 169
+  
+\end{euleroutput}
+\begin{eulercomment}
+Gagasan kedua dari trigonometri rasional adalah penyebarannya. Spread
+mengukur bukaan antar baris. Ini adalah 0, jika garis sejajar, dan 1,
+jika garis persegi panjang. Ini adalah kuadrat dari sinus sudut\\
+antara dua garis.
+
+
+Garis AB dan AC pada gambar di atas didefinisikan sebagai
+
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+s_a = \sin(\alpha)^2 = \frac{a}{c},
+\]
+\end{eulerformula}
+\begin{eulercomment}
+di mana a dan c adalah kuadrat dari segitiga persegi panjang mana pun
+dengan satu sudut di A.
+\end{eulercomment}
+\begin{eulerprompt}
+>sa &= a/c; $sa
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\frac{25}{169}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Ini lebih mudah dihitung daripada sudut, tentu saja. Tetapi Anda
+kehilangan properti yang sudut dapat ditambahkan dengan mudah.
+
+Tentu saja, kita dapat mengubah nilai perkiraan sudut wa menjadi
+sprad, dan mencetaknya sebagai\\
+pecahan.
+\end{eulercomment}
+\begin{eulerprompt}
+>fracprint(sin(wa)^2)
+\end{eulerprompt}
+\begin{euleroutput}
+  9/25
+\end{euleroutput}
+\begin{eulercomment}
+Hukum cosinus dari trgonometri klasik diterjemahkan menjadi ”hukum
+silang” berikut.
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+(c+b-a)^2 = 4 b c \, (1-s_a)
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Di sini a, b, dan c adalah kuadran dari sisi-sisi segitiga, dan sa
+adalah sebaran di sudut A. Sisi a, seperti\\
+biasa, berlawanan dengan sudut A.
+
+Hukum ini diimplementasikan dalam file geometry.e yang kami muat ke
+Euler.
+\end{eulercomment}
+\begin{eulerprompt}
+>$crosslaw(aa,bb,cc,saa)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\left({\it cc}+{\it bb}-{\it aa}\right)^2=4\,{\it bb}\,{\it cc}\,
+ \left(1-{\it saa}\right)
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Dalam kasus kami, kita mendapatkan
+\end{eulercomment}
+\begin{eulerprompt}
+>$crosslaw(a,b,c,sa)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+82944=82944
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Mari kita gunakan crosslaw ini untuk mencari sebaran di A. Untuk
+melakukan ini, kita menghasilkan crosslaw untuk kuadran a, b, dan c,
+dan menyelesaikannya untuk sebaran yang tidak diketahui sa.
+
+Anda dapat melakukan ini dengan tangan dengan mudah, tetapi saya
+menggunakan Maxima. Tentu saja,kami mendapatkan hasilnya, kami sudah
+mendapatkannya.
+\end{eulercomment}
+\begin{eulerprompt}
+>$crosslaw(a,b,c,x), $solve(%,x)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+82944=97344\,\left(1-x\right)
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+\left[ x=\frac{25}{169} \right] 
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Kami sudah tahu ini. Definisi penyebaran adalah kasus khusus dari
+hukum lintas hukum.
+
+Kita juga bisa menyelesaikan ini untuk umum a, b, c. Hasilnya adalah
+rumus yang menghitung sebaran sudut segitiga berdasarkan kuadran
+ketiga sisinya.
+\end{eulercomment}
+\begin{eulerprompt}
+>$solve(crosslaw(aa,bb,cc,x),x)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\left[ x=\frac{-{\it cc}^2-\left(-2\,{\it bb}-2\,{\it aa}\right)\,
+ {\it cc}-{\it bb}^2+2\,{\it aa}\,{\it bb}-{\it aa}^2}{4\,{\it bb}\,
+ {\it cc}} \right] 
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Kita bisa membuat fungsi dari hasilnya. Fungsi seperti itu sudah
+ditentukan dalam file geometry.e Euler.
+\end{eulercomment}
+\begin{eulerprompt}
+>$spread(a,b,c)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\frac{25}{169}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Sebagai contoh, kita bisa menggunakannya untuk menghitung sudut
+segitiga bersisi
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+a, \quad a, \quad \frac{4a}{7}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Hasilnya rasional, yang tidak mudah didapat jika kita menggunakan
+trigonometri klasik.
+\end{eulercomment}
+\begin{eulerprompt}
+>$spread(a,a,4*a/7)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\frac{6}{7}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Ini adalah sudut dalam derajat
+\end{eulercomment}
+\begin{eulerprompt}
+>degprint(arcsin(sqrt(6/7)))
+\end{eulerprompt}
+\begin{euleroutput}
+  67°47'32.44''
+\end{euleroutput}
+\begin{eulercomment}
+Contoh Lain\\
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+Sekarang, mari kita coba contoh yang lebih maju.
+
+Kami mengatur tiga sudut segitiga sebagai berikut.\\
+asilnya rasional, yang tidak mudah didapat jika kita menggunakan
+trigonometri klasik.
+\end{eulercomment}
+\begin{eulerprompt}
+>A&:=[1,2]; B&:=[4,3]; C&:=[0,4]; ...
+>setPlotRange(-1,5,1,7); ...
+>plotPoint(A,"A"); plotPoint(B,"B"); plotPoint(C,"C"); ...
+>plotSegment(B,A,"c"); plotSegment(A,C,"b"); plotSegment(C,B,"a"); ...
+>insimg;
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_Trigonometri rasional_ Geometry_Aplikom-010.png}
+\begin{eulercomment}
+Menggunakan Pythogoras, mudah untuk menghitung jarak antara dua titik.
+Saya pertama kali menggunakan jarak fungsi file Euler untuk geometri.
+Jarak fungsi menggunakan geometri klasik.
+\end{eulercomment}
+\begin{eulerprompt}
+>$distance(A,B)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\sqrt{10}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Euler juga mengandung fungsi untuk kuadran antara dua titik.\\
+Dalam contoh berikut, karena c+b bukan a, maka segitiga itu bukan
+persegi panjang.
+\end{eulercomment}
+\begin{eulerprompt}
+>c &= quad(A,B); $c, b &= quad(A,C); $b, a &= quad(B,C); $a,
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+10
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+5
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+17
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Pertama, mari kita hitung sudut tradisional. Fungsi computeAngle
+menggunakan metode biasa berdasarkan hasil kali titik dua vektor.
+Hasilnya adalah beberapa pendekatan floating point.
+\end{eulercomment}
+\begin{eulerprompt}
+>wb &= computeAngle(A,B,C); $wb, $(wb/pi*180)()
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\arccos \left(\frac{11}{\sqrt{10}\,\sqrt{17}}\right)
+\]
+\end{eulerformula}
+\begin{euleroutput}
+  32.4711922908
+\end{euleroutput}
+\begin{eulercomment}
+Dengan menggunakan pensil dan kertas, kita dapat melakukan hal yang
+sama dengan hukum silang.
+
+Kami memasukkan kuadran a, b, dan c ke dalam hukum silang dan
+menyelesaikan x.
+\end{eulercomment}
+\begin{eulerprompt}
+>$crosslaw(a,b,c,x), $solve(%,x),
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+4=200\,\left(1-x\right)
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+\left[ x=\frac{49}{50} \right] 
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Yaitu, apa yang dilakukan oleh penyebaran fungsi yang didefinisikan
+dalam "geometry.e".
+\end{eulercomment}
+\begin{eulerprompt}
+>sb &= spread(b,a,c); $sb
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\frac{49}{170}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Maxima mendapatkan hasil yang sama menggunakan trigonometri biasa,
+jika kita memaksanya. Itu menyelesaikan istilah sin(arccos(...))
+menjadi hasil pecahan. Sebagian besar siswa tidak dapat melakukan ini.
+\end{eulercomment}
+\begin{eulerprompt}
+>$sin(computeAngle(A,B,C))^2
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\frac{49}{170}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Setelah kita memiliki penyebaran di B, kita dapat menghitung tinggi ha
+di sisi a. Ingatlah bahwa
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+s_b=\frac{h_a}{c}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+menurut definisi.
+\end{eulercomment}
+\begin{eulerprompt}
+>ha &= c*sb; $ha
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\frac{49}{17}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Gambar berikut ini dibuat dengan program geometri C.a.R., yang dapat
+menggambar kuadran dan penyebaran.
+
+image: (20) Rational\_Geometry\_CaR.png
+
+Menurut definisi, panjang ha adalah akar kuadrat dari kuadrannya.
+\end{eulercomment}
+\begin{eulerprompt}
+>$sqrt(ha)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\frac{7}{\sqrt{17}}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Sekarang kita dapat menghitung luas segitiga. Jangan lupa, bahwa kita
+berurusan dengan kuadran!
+\end{eulercomment}
+\begin{eulerprompt}
+>$sqrt(ha)*sqrt(a)/2
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\frac{7}{2}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Rumus penentu yang biasa menghasilkan hasil yang sama.
+\end{eulercomment}
+\begin{eulerprompt}
+>$areaTriangle(B,A,C)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\frac{7}{2}
+\]
+\end{eulerformula}
+\eulersubheading{Rumus Heron}
+\begin{eulercomment}
+Sekarang, mari kita selesaikan masalah ini secara umum!
+\end{eulercomment}
+\begin{eulerprompt}
+>&remvalue(a,b,c,sb,ha);
+\end{eulerprompt}
+\begin{eulercomment}
+Pertama-tama kita menghitung penyebaran di B untuk segitiga dengan
+sisi a, b, dan c. Kemudian kita menghitung luas kuadrat ("quadrea"?),
+memfaktorkannya dengan Maxima, dan kita mendapatkan rumus Heron yang
+terkenal.
+
+Memang, hal ini sulit dilakukan dengan pensil dan kertas.
+\end{eulercomment}
+\begin{eulerprompt}
+>$spread(b^2,c^2,a^2), $factor(%*c^2*a^2/4)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\frac{-c^4-\left(-2\,b^2-2\,a^2\right)\,c^2-b^4+2\,a^2\,b^2-a^4}{4
+ \,a^2\,c^2}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+\frac{\left(-c+b+a\right)\,\left(c-b+a\right)\,\left(c+b-a\right)\,
+ \left(c+b+a\right)}{16}
+\]
+\end{eulerformula}
+\eulersubheading{Aturan Penyebaran Tiga}
+\begin{eulercomment}
+Kerugian dari spread adalah bahwa mereka tidak lagi hanya menambahkan
+sudut seperti.\\
+\end{eulercomment}
+\begin{eulerttcomment}
+ 
+\end{eulerttcomment}
+\begin{eulercomment}
+Namun, tiga spread dari sebuah segitiga memenuhi aturan "triple
+spread" berikut ini.
+\end{eulercomment}
+\begin{eulerprompt}
+>&remvalue(sa,sb,sc); $triplespread(sa,sb,sc)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\left({\it sc}+{\it sb}+{\it sa}\right)^2=2\,\left({\it sc}^2+
+ {\it sb}^2+{\it sa}^2\right)+4\,{\it sa}\,{\it sb}\,{\it sc}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Aturan ini berlaku untuk tiga sudut yang berjumlah 180°.
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\alpha+\beta+\gamma=\pi
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Karena penyebaran dari
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\alpha, \pi-\alpha
+\]
+\end{eulerformula}
+\begin{eulercomment}
+sama, aturan triple spread juga benar, jika
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\alpha+\beta=\gamma
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Karena penyebaran sudut negatifnya sama, aturan penyebaran tiga kali
+lipat juga berlaku, jika
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\alpha+\beta+\gamma=0
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Contohnya, kita bisa menghitung penyebaran sudut 60°. Hasilnya adalah
+3/4. Namun, persamaan ini memiliki solusi kedua, di mana semua
+penyebarannya adalah 0.
+\end{eulercomment}
+\begin{eulerprompt}
+>$solve(triplespread(x,x,x),x)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\left[ x=\frac{3}{4} , x=0 \right] 
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Penyebaran 90° jelas adalah 1. Jika dua sudut ditambahkan ke 90°,
+penyebarannya akan menyelesaikan persamaan penyebaran tiga dengan a,
+b, 1. Dengan perhitungan berikut, kita mendapatkan a + b = 1.
+\end{eulercomment}
+\begin{eulerprompt}
+>$triplespread(x,y,1), $solve(%,x)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\left(y+x+1\right)^2=2\,\left(y^2+x^2+1\right)+4\,x\,y
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+\left[ x=1-y \right] 
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Karena penyebaran 180°-t sama dengan penyebaran t, rumus penyebaran
+tiga kali lipat juga berlaku, jika satu sudut adalah jumlah atau
+selisih dari dua sudut lainnya.
+
+Jadi kita dapat menemukan penyebaran sudut dua kali lipat. Perhatikan
+bahwa ada dua solusi lagi. Kita jadikan ini sebuah fungsi.
+\end{eulercomment}
+\begin{eulerprompt}
+>$solve(triplespread(a,a,x),x), function doublespread(a) &= factor(rhs(%[1]))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\left[ x=4\,a-4\,a^2 , x=0 \right] 
+\]
+\end{eulerformula}
+\begin{euleroutput}
+  
+                              - 4 (a - 1) a
+  
+\end{euleroutput}
+\eulersubheading{Garis Pembagi Sudut}
+\begin{eulercomment}
+Ini adalah situasi yang sudah kita ketahui.
+\end{eulercomment}
+\begin{eulerprompt}
+>C&:=[0,0]; A&:=[4,0]; B&:=[0,3]; ...
+>setPlotRange(-1,5,-1,5); ...
+>plotPoint(A,"A"); plotPoint(B,"B"); plotPoint(C,"C"); ...
+>plotSegment(B,A,"c"); plotSegment(A,C,"b"); plotSegment(C,B,"a"); ...
+>insimg;
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_Trigonometri rasional_ Geometry_Aplikom-031.png}
+\begin{eulercomment}
+Mari kita hitung panjang garis bagi sudut di A. Tetapi kita ingin
+menyelesaikannya untuk a, b, c secara umum.
+\end{eulercomment}
+\begin{eulerprompt}
+>&remvalue(a,b,c);
+\end{eulerprompt}
+\begin{eulercomment}
+Jadi, pertama-tama kita menghitung penyebaran sudut yang dibelah dua
+di A, menggunakan rumus penyebaran tiga.
+
+Masalah dengan rumus ini muncul lagi. Rumus ini memiliki dua solusi.
+Kita harus memilih salah satu yang benar. Solusi lainnya mengacu pada
+sudut terbagi dua 180°-wa.
+\end{eulercomment}
+\begin{eulerprompt}
+>$triplespread(x,x,a/(a+b)), $solve(%,x), sa2 &= rhs(%[1]); $sa2
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\left(2\,x+\frac{a}{b+a}\right)^2=2\,\left(2\,x^2+\frac{a^2}{\left(
+ b+a\right)^2}\right)+\frac{4\,a\,x^2}{b+a}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+\left[ x=\frac{-\sqrt{b^2+a\,b}+b+a}{2\,b+2\,a} , x=\frac{\sqrt{b^2
+ +a\,b}+b+a}{2\,b+2\,a} \right] 
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+\frac{-\sqrt{b^2+a\,b}+b+a}{2\,b+2\,a}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Mari kita periksa persegi panjang Mesir.
+\end{eulercomment}
+\begin{eulerprompt}
+>$sa2 with [a=3^2,b=4^2]
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\frac{1}{10}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Kita bisa mencetak sudut dalam Euler, setelah mentransfer penyebaran
+ke radian.
+\end{eulercomment}
+\begin{eulerprompt}
+>wa2 := arcsin(sqrt(1/10)); degprint(wa2)
+\end{eulerprompt}
+\begin{euleroutput}
+  18°26'5.82''
+\end{euleroutput}
+\begin{eulercomment}
+Titik P adalah perpotongan garis bagi sudut dengan sumbu y.
+\end{eulercomment}
+\begin{eulerprompt}
+>P := [0,tan(wa2)*4]
+\end{eulerprompt}
+\begin{euleroutput}
+  [0,  1.33333]
+\end{euleroutput}
+\begin{eulerprompt}
+>plotPoint(P,"P"); plotSegment(A,P):
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_Trigonometri rasional_ Geometry_Aplikom-036.png}
+\begin{eulercomment}
+Mari kita periksa sudut-sudutnya dalam contoh spesifik kita.
+\end{eulercomment}
+\begin{eulerprompt}
+>computeAngle(C,A,P), computeAngle(P,A,B)
+\end{eulerprompt}
+\begin{euleroutput}
+  0.321750554397
+  0.321750554397
+\end{euleroutput}
+\begin{eulercomment}
+Sekarang kita menghitung panjang garis bagi AP.
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\frac{BC}{\sin(w_a)} = \frac{AC}{\sin(w_b)} = \frac{AB}{\sin(w_c)}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+berlaku dalam segitiga apa pun. Kuadratkan, ini diterjemahkan ke dalam
+apa yang disebut "hukum penyebaran"
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\frac{a}{s_a} = \frac{b}{s_b} = \frac{c}{s_b}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+di mana a, b, c menunjukkan kuadrannya.
+
+Karena spread CPA adalah 1-sa2, kita mendapatkan bisa/1=b/(1-sa2) dan
+bisa menghitung bisa (kuadran dari pembagi sudut).
+\end{eulercomment}
+\begin{eulerprompt}
+>&factor(ratsimp(b/(1-sa2))); bisa &= %; $bisa
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\frac{2\,b\,\left(b+a\right)}{\sqrt{b\,\left(b+a\right)}+b+a}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Mari kita periksa rumus ini untuk nilai-nilai Mesir kita.
+\end{eulercomment}
+\begin{eulerprompt}
+>sqrt(mxmeval("at(bisa,[a=3^2,b=4^2])")), distance(A,P)
+\end{eulerprompt}
+\begin{euleroutput}
+  4.21637021356
+  4.21637021356
+\end{euleroutput}
+\begin{eulercomment}
+Kita juga dapat menghitung P dengan menggunakan rumus penyebaran.
+\end{eulercomment}
+\begin{eulerprompt}
+>py&=factor(ratsimp(sa2*bisa)); $py
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+-\frac{b\,\left(\sqrt{b\,\left(b+a\right)}-b-a\right)}{\sqrt{b\,
+ \left(b+a\right)}+b+a}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Nilainya sama dengan yang kita dapatkan dengan rumus trigonometri.
+\end{eulercomment}
+\begin{eulerprompt}
+>sqrt(mxmeval("at(py,[a=3^2,b=4^2])"))
+\end{eulerprompt}
+\begin{euleroutput}
+  1.33333333333
+\end{euleroutput}
+\eulersubheading{Sudut Akor}
+\begin{eulercomment}
+Lihatlah situasi berikut ini
+\end{eulercomment}
+\begin{eulerprompt}
+>setPlotRange(1.2); ...
+>color(1); plotCircle(circleWithCenter([0,0],1)); ...
+>A:=[cos(1),sin(1)]; B:=[cos(2),sin(2)]; C:=[cos(6),sin(6)]; ...
+>plotPoint(A,"A"); plotPoint(B,"B"); plotPoint(C,"C"); ...
+>color(3); plotSegment(A,B,"c"); plotSegment(A,C,"b"); plotSegment(C,B,"a"); ...
+>color(1); O:=[0,0];  plotPoint(O,"0"); ...
+>plotSegment(A,O); plotSegment(B,O); plotSegment(C,O,"r"); ...
+>insimg;
+\end{eulerprompt}
+\eulerimg{27}{images/Pekan 11-12_Presentasi_Fanny Erina Dewi_22305141005_Trigonometri rasional_ Geometry_Aplikom-039.png}
+\begin{eulercomment}
+Kita dapat menggunakan Maxima untuk menyelesaikan rumus penyebaran
+tiga untuk sudut-sudut di pusat O untuk r. Dengan demikian kita
+mendapatkan rumus untuk jari-jari kuadrat dari pericircle dalam hal
+kuadran sisi-sisinya.
+
+Kali ini, Maxima menghasilkan beberapa angka nol yang rumit, yang kita
+abaikan.
+\end{eulercomment}
+\begin{eulerprompt}
+>&remvalue(a,b,c,r); // hapus nilai-nilai sebelumnya untuk perhitungan baru
+>rabc &= rhs(solve(triplespread(spread(b,r,r),spread(a,r,r),spread(c,r,r)),r)[4]); $rabc
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+-\frac{a\,b\,c}{c^2-2\,b\,c+a\,\left(-2\,c-2\,b\right)+b^2+a^2}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Kita dapat menjadikannya sebuah fungsi Euler.
+\end{eulercomment}
+\begin{eulerprompt}
+>function periradius(a,b,c) &= rabc;
+\end{eulerprompt}
+\begin{eulercomment}
+Mari kita periksa hasilnya untuk poin A, B, C.
+\end{eulercomment}
+\begin{eulerprompt}
+>a:=quadrance(B,C); b:=quadrance(A,C); c:=quadrance(A,B);
+\end{eulerprompt}
+\begin{eulercomment}
+Radiusnya 1.
+\end{eulercomment}
+\begin{eulerprompt}
+>periradius(a,b,c)
+\end{eulerprompt}
+\begin{euleroutput}
+  1
+\end{euleroutput}
+\begin{eulercomment}
+Faktanya adalah, bahwa penyebaran CBA hanya bergantung pada b dan c.
+Ini adalah teorema sudut akor.
+\end{eulercomment}
+\begin{eulerprompt}
+>$spread(b,a,c)*rabc | ratsimp
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\frac{b}{4}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Faktanya, penyebarannya adalah b/(4r), dan kita melihat bahwa sudut
+chord b adalah setengah dari sudut tengah.
+\end{eulercomment}
+\begin{eulerprompt}
+>$doublespread(b/(4*r))-spread(b,r,r) | ratsimp
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+0
+\]
+\end{eulerformula}
+\end{eulernotebook}
+\end{document}
