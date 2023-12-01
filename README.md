@@ -1,1 +1,1 @@
-# Tugas-Proyek-Aplikasi-Komputer
+# Tugas-Proyek-Aplikasi-Komputer Versi Landscape
